@@ -1,0 +1,14 @@
+/*header goes here*/
+.header{
+
+}
+.nav{
+overflow: hidden;
+}
+
+.nav a{
+float: left;
+display: block;
+text-align: center;
+border-style: none solid;
+}
