@@ -1,7 +1,19 @@
 /*header goes here*/
 .header{
-
+float: left;
+display: block;
 }
+
+.headText{
+    text-align: center;
+}
+
+.headImg{
+    max-width: 25%;
+    height: auto;
+    background-image: url("images/header.jpg");
+}
+
 .nav{
 overflow: hidden;
 }
