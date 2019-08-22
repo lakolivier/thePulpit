@@ -5,6 +5,7 @@ display: block;
 }
 
 .headText{
+    max-width: 75%;
     text-align: center;
 }
 
