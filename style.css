@@ -13,7 +13,7 @@ margin: 0;
 
 .headImg{
     width: 25%;
-    background-image: url("images/header.jpeg");
+    background: url("images/header.jpeg") no-repeat right;
 }
 
 .nav{
