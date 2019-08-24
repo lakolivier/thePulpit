@@ -2,12 +2,12 @@
 .header{
 float: left;
 display: block;
-height: 200px;
+height: 100px;
 margin: 0;
 }
 
 .headText{
-    font-family: "Franklin Gothic", Gothic, sans-serif;
+    font: bold 85px century gothic, serif;
     width: 75%;
     text-align: left;
 }
