@@ -2,6 +2,7 @@
 .header{
 float: left;
 display: block;
+height: 200px;
 margin: 0;
 }
 
@@ -12,7 +13,6 @@ margin: 0;
 
 .headImg{
     max-width: 25%;
-    height: auto;
     background-image: url("images/header.jpeg");
 }
 
