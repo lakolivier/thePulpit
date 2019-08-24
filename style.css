@@ -7,12 +7,14 @@ margin: 0;
 }
 
 .headText{
+    font-family: "Franklin Gothic", Gothic, sans-serif;
     width: 75%;
-    text-align: center;
+    text-align: left;
 }
 
 .headImg{
     width: 25%;
+    padding: 0;
     background: url("images/header.jpeg") no-repeat right;
 }
 
