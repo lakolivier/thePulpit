@@ -13,10 +13,10 @@ margin: 0;
     text-align: left;
 }
 
-.headImg{
+.header > img{
     flex: 25%;
     padding: 0;
-    background: url("images/header.jpeg") no-repeat right;
+    height: auto;
 }
 
 .nav{
