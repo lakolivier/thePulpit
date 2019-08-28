@@ -9,6 +9,10 @@
     font: bold 70px century gothic, serif;
 }
 
+.header a{
+    text-decoration: none;
+}
+
 .nav{
 overflow: hidden;
 }
@@ -17,5 +21,7 @@ overflow: hidden;
 float: left;
 display: block;
 text-align: center;
-border-style: none solid;
+text-decoration: none;
+padding: 5px;
+border-right: 1px solid;
 }
