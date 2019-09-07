@@ -1,0 +1,79 @@
+/*header goes here*/
+.header{
+    height: 100px;
+    margin: 0;
+    background: url(images/header.jpeg) no-repeat fixed right top;
+    background-size: auto 100px;
+    text-align: left;
+    white-space: nowrap;
+    font: bold 70px century gothic, serif;
+}
+
+.header a{
+    text-decoration: none;
+    color: black;
+}
+
+/*enter the nav*/
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+li{
+    float: left;
+}
+
+li a, .dropButton{
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    border-right: 1px solid;
+}
+
+li.dropMenu{
+    display: inline-block;
+}
+
+.dropObjects{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 8px black;
+    z-index: 1;
+}
+
+.dropObjects a{
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/*on hover*/
+li a:hover, .dropMenu:hover .dropButton{
+    background-color: red;
+}
+
+.dropObjects a:hover{
+    background-color: lightgrey;
+}
+
+.dropMenu:hover .dropObjects{
+    display: block;
+}
+
+/*keep it responsive*/
+@media screen and (max-width: 925px){
+    .header{
+        background-image: none;
+        font-size: 7.5vw;
+    }
+}
