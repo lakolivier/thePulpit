@@ -5,5 +5,8 @@ $(function() {
 })
 
 $(function() {
-    $.ajax({url: "hitData.php"});
+ /*   $.ajax({url: "hitData.php", success: function(result)});*/
+    $.get("hitData.php", function(data){
+        alert(data);
+    });
 });
