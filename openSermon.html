@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <head>
+    <script src = "jquery-3.4.1.js"></script>
     <link rel = "stylesheet" type = "text/css" href = "style2.css">
+    <link rel = "stylesheet" type = "text/css" href = "openSermon.css">
+    <script src = "openSermon.js"></script>
     <meta name = "viewport" content = "width = device-width, initial-scale = 1">
 </head>
 
@@ -11,24 +14,26 @@
     </div>
     <!--Nav lives here-->
     <nav>
-    <ul>
-            <li class = "dropMenu">
-                <a href = "sermons.html" class = "dropButton">SERMONS</a>
-                <div class = "dropObjects">
-                    <a href = "#" style = "border-right: none;">BY DATE</a>
-                    <a href = "#" style = "border-right: none;">BY TOPIC</a>
-                </div>
-            </li>    
-            <li><a href = "readings.html">READINGS</a></li>
-            <li><a href = "interviews.html">INTERVIEWS</a></li>
-            <li><a href = "about.html" style = "border-right: none;">ABOUT</a></li>
-    </ul>
+        <ul>
+                <li class = "dropMenu">
+                    <a href = "#" class = "dropButton">SERMONS</a>
+                    <div class = "dropObjects">
+                        <a href = "sermonDate.html">BY DATE</a>
+                        <a href = "#">BY TOPIC</a>
+                    </div>
+                </li>    
+                <li><a href = "readings.html">READINGS</a></li>
+                <li><a href = "interviews.html">INTERVIEWS</a></li>
+                <li><a href = "about.html"">ABOUT</a></li>
+        </ul>
     </nav>
     <!--Content body-->
-    <h1>SERMON TITLE HERE</h1>
-    <div class = "sermonVid"></div>
-    <h2>LESSON HERE</h2>
-    <div class = "sermonText"></div>
-
+    <div id = "sermonTitle"></div>
+    <div id = "sermonDate"></div>
+    <div id = "sermonVerse"></div>
+    <div id = "vidBox">
+        <iframe id = "sermonVid" width = "560" height = "315" frameborder = "0" allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class = "sermonFlex"></div>
 </body>
 </html>

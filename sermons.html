@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <link rel = "stylesheet" type = "text/css" href = "style2.css">
 </head>
 
 <body>
@@ -9,11 +9,19 @@
         <a href = "index.html">Think With Dr. Gil Bowen</a>
     </div>
     <!--Nav lives here-->
-    <div class = "nav">
-        <a href = "sermons.html">Sermons</a>
-        <a href = "readings.html">Readings</a>
-        <a href = "interviews.html">Interviews</a>
-        <a href = "about.html" style = "border-right: none;">About</a>
-    </div>
+    <nav>
+        <ul>
+                <li class = "dropMenu">
+                    <a href = "sermons.html" class = "dropButton">SERMONS</a>
+                    <div class = "dropObjects">
+                        <a href = "#" style = "border-right: none;">BY DATE</a>
+                        <a href = "#" style = "border-right: none;">BY TOPIC</a>
+                    </div>
+                </li>    
+                <li><a href = "readings.html">READINGS</a></li>
+                <li><a href = "interviews.html">INTERVIEWS</a></li>
+                <li><a href = "about.html" style = "border-right: none;">ABOUT</a></li>
+        </ul>
+        </nav>
 </body>
 </html>

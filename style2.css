@@ -1,75 +1,74 @@
+*{
+    color: #383838;
+}
 /*header goes here*/
 .header{
     height: 100px;
     margin: 0;
+    padding: 10px;
     background: url(images/header.jpeg) no-repeat fixed right top;
     background-size: auto 100px;
     text-align: left;
     white-space: nowrap;
-    font: bold 70px century gothic, serif;
+    font: 70px Helvetica, sans-serif;
+    font-weight: bold;
 }
-
 .header a{
     text-decoration: none;
-    color: black;
 }
-
 /*enter the nav*/
 ul{
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0 10px;
     overflow: hidden;
-    background-color: white;
 }
-
 li{
     float: left;
+    border: 1px solid #383838;
+    margin: 2px;
 }
-
 li a, .dropButton{
     display: inline-block;
-    color: black;
+    font: 20px "Helvetica", sans-serif;
     text-align: center;
     padding: 5px;
     text-decoration: none;
-    border-right: 1px solid;
 }
-
 li.dropMenu{
     display: inline-block;
 }
-
+ul, li, a {
+    background: #ffffff;
+    /*box-shadow: 0 6px 2px 0 rgba(0, 0, 0, 0.2);*/
+}
 .dropObjects{
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 8px black;
+    background-color: #ffffff;
+    min-width: 111.13px;
+    box-shadow: 2px 2px 2px 0 #383838;
     z-index: 1;
 }
-
 .dropObjects a{
-    color: black;
     padding: 5px;
     text-decoration: none;
     display: block;
     text-align: left;
 }
-
 /*on hover*/
 li a:hover, .dropMenu:hover .dropButton{
-    background-color: red;
+    background-color: #383838;
+    color: #ffffff;
+    box-shadow: 2px 2px 2px 0 #383838;
 }
-
 .dropObjects a:hover{
-    background-color: lightgrey;
+    background-color: #383838;
+    color: #ffffff;
 }
-
 .dropMenu:hover .dropObjects{
     display: block;
 }
-
 /*keep it responsive*/
 @media screen and (max-width: 925px){
     .header{
