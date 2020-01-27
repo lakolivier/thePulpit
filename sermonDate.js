@@ -1,5 +1,5 @@
 //gets json object from php file, assigns values to html ids
-/*$(function() {
+$(function() {
     $.get("sermonDate.php", function(jsonObj) {
         //convert json to js object
         var jsArr = JSON.parse(jsonObj);
@@ -29,4 +29,4 @@
             }
         }
     });
-});*/
+});
