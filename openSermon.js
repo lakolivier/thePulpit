@@ -23,13 +23,13 @@ $(function(){
             //plug image links into array w/ suffixes
             sermonText[i] = $('<img src = "images/scans/' + jsObj.imgLink + suffix + '.jpg" id = "img' + suffix + '">');
             //create flex objects to hold images
-            let column = '<div class = "sermonCol" id = "sermonCol' + suffix + '"></div>';
+            let column = '<div id = "sermonCol' + suffix + '"></div>';
             //add flex objects to container, then append images to flex objects
-            $(".sermonFlex").append(column);
+            $("#sermonFlex").append(column);
             $("#sermonCol" + suffix).append(sermonText[i]);
             //log width attribute of each image, flex grow stopped working?
             if ($("#img" + suffix)[0].naturalWidth > 2000) {
-                $("#sermonCol" + suffix).css("flex-grow", "4");
+                $("#sermonCol" + suffix).css("flex-grow-1");
             }
             //increment suffix char
             suffix = String.fromCharCode(suffix.charCodeAt(0) + 1);
