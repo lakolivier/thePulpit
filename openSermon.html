@@ -36,15 +36,17 @@
         </div>
     <!--Content body-->
     <div class = "container">
-    <div class = "card bg-light">
-        <div class = "card-body">
-        <div id = "sermonTitle"></div>
-        <div id = "sermonDate"></div>
-        <div id = "sermonVerse"></div>
-        <div id = "vidBox">
-            <iframe id = "sermonVid" width = "560" height = "315" frameborder = "0" allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class = "card bg-light border-0">
+        <div class = "card-title">
+            <div id = "sermonTitle"></div>
         </div>
-        <div id = "sermonFlex" class = "d-flex flex-md-row"></div>
+        <div class = "card-body">
+        <div class = "text-muted" id = "sermonDate"></div>
+        <div class = "text-muted" id = "sermonVerse"></div>
+        <div id = "vidBox">
+            <iframe class = "mx-auto d-block" id = "sermonVid" width = "560" height = "315" frameborder = "0" allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div id = "sermonFlex" class = "d-flex flex-xs-column"></div>
         </div>
     </div>
     </div>
