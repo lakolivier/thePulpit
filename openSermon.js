@@ -21,7 +21,7 @@ $(function(){
         let sermonText = [];
         for (let i = 0; i < jsObj.numImgs; i++) {
             //plug image links into array w/ suffixes
-            sermonText[i] = $('<img src = "images/scans/' + jsObj.imgLink + suffix + '.jpg" id = "img' + suffix + '">');
+            sermonText[i] = $('<img src = "images/scans/' + jsObj.imgLink + suffix + '.jpg" class = "img-fluid" id = "img' + suffix + '">');
             //create flex objects to hold images
             let column = '<div id = "sermonCol' + suffix + '"></div>';
             //add flex objects to container, then append images to flex objects
