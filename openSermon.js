@@ -8,10 +8,10 @@ $(function(){
             $("#sermonTitle").html(jsObj.title);
         }
         if (jsObj.verse) {
-            $("#sermonVerse").html(jsObj.verse);
+            $("#sermonVerse").append(jsObj.verse);
         }
         if (jsObj.dateOf) {
-            $("#sermonDate").html(jsObj.dateOf);
+            $("#sermonDate").append(jsObj.dateOf);
         }
         if (jsObj.vidLink) {
             $("#sermonVid").attr("src", "https://www.youtube.com/embed/" + jsObj.vidLink);
