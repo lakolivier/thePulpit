@@ -7,7 +7,7 @@ $(function() {
         let holdDate = new Date(jsArr[0]["dateOf"]).getFullYear();
         let lastDate = holdDate;
         $("nav").after('<div class = "container" id = "allYears"></div>');
-        $("#allYears").append('<div class = "card col-xl-12 my-3 border-top-0 border-left-0 border-right-0 divYear" id = "' + holdDate + '"></div>');
+        $("#allYears").append('<div class = "card col-xl-12 my-3 border-0 divYear" id = "' + holdDate + '"></div>');
         $("#" + holdDate).append('<h2 class = "card-title">' + holdDate + "</h2>")
         for (let i = 0; i < $(jsArr).length; i++) {
             jsArr[i]["dateOf"] = new Date(jsArr[i]["dateOf"]);
