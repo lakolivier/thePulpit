@@ -2,7 +2,6 @@
 $(function(){
     $.get("openSermon.php", function(jsonObj) {
         //convert json to js object
-        console.log(jsonObj);
         var jsObj = JSON.parse(jsonObj);
         //if title then assign title
         if (jsObj.title) {
