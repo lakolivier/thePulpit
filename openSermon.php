@@ -9,13 +9,13 @@ $link = new mysqli ($servername, $username, $password, $dbname);
 //check connection
 if($link -> connect_error){
     die("Connection failed: " . $link -> connect_error);
-}/*
+}
 //select from db REQUIRES INPUT OF SERMONID
 $sql = "SELECT title, verse, dateOf, vidLink, imgLink, numImgs FROM Sermons";
 $result = $link -> query($sql);
 //returns json object assigned value
-*/
 
+/*
 $result = [
     "title" => "The Power of Hope",
     "verse" => "John 5: 1-9",
@@ -25,6 +25,6 @@ $result = [
     "numImgs" => 3
 ];
 $mockSermon = '{"title":"Who Are The Powerful?", "verse":"Philippians 2: 1-13", "dateOf":"1995-12-17", "vidLink":"NULL", "imgLink":"Dec17_95", "numImgs":"3"}';
-//echo $mockSermon;
+//echo $mockSermon;*/
 echo json_encode($result);
 ?>
