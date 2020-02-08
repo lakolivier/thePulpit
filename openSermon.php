@@ -1,19 +1,18 @@
 <?php
-/*
 //login information for mysql database
-$servername = "localhost";
+$servername = "rectory.gilbowen.dreamhosters.com";
 $username = "gilbowen";
 $password = "!bowen19";
-$dbname = "theRectory";
+$dbname = "rectory6";
 //start connection
-$conn = new mysqli ($servername, $username, $password, $dbname);
+$link = new mysqli ($servername, $username, $password, $dbname);
 //check connection
-if($conn -> connect_error){
-    die("Connection failed: " . $conn -> connect_error);
-}
+if($link -> connect_error){
+    die("Connection failed: " . $link -> connect_error);
+}/*
 //select from db REQUIRES INPUT OF SERMONID
 $sql = "SELECT title, verse, dateOf, vidLink, imgLink, numImgs FROM Sermons";
-$result = $conn -> query($sql);
+$result = $link -> query($sql);
 //returns json object assigned value
 */
 
