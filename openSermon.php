@@ -11,8 +11,9 @@ if($link -> connect_error){
     die("Connection failed: " . $link -> connect_error);
 }
 //select from db REQUIRES INPUT OF SERMONID
-//$test = $link -> query("SELECT * FROM Sermons")
-$sql = "SELECT title, verse, dateOf, vidLink, imgLink, numImgs FROM Sermons WHERE sermonId = 1;";
+$test = $link -> query("SELECT * FROM Sermons");
+echo $test;
+$sql = "SELECT title, verse, dateOf, vidLink, imgLink, numImgs FROM Sermons WHERE sermonId = 1";
 $result = $link -> query($sql);
 //returns json object assigned value
 
