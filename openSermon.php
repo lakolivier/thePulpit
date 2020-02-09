@@ -12,7 +12,7 @@ if($link -> connect_error){
 }
 //select from db REQUIRES INPUT OF SERMONID
 $test = $link -> query("SELECT * FROM Sermons");
-echo $test;
+echo json_encode($test);
 $sql = "SELECT title, verse, dateOf, vidLink, imgLink, numImgs FROM Sermons WHERE sermonId = 1";
 $result = $link -> query($sql);
 //returns json object assigned value
