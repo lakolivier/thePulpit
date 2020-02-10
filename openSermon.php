@@ -16,7 +16,7 @@ $test = $link -> query("SELECT * FROM Sermons");
 echo json_encode($test);*/
 $sql = "SELECT title, verse, dateOf, vidLink, imgLink, numImgs FROM Sermons WHERE sermonId IN (1, 2)";
 $result = $link->query($sql);
-$test = mysqli_fetch_assoc($result);
+$test = mysqli_fetch_all($result);
 //returns json object assigned value
 
 /*
