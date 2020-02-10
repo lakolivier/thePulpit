@@ -14,7 +14,7 @@ if($link -> connect_error){
 /*
 $test = $link -> query("SELECT * FROM Sermons");
 echo json_encode($test);*/
-$sql = "SELECT title, verse, dateOf, vidLink, imgLink, numImgs FROM Sermons WHERE sermonId = 1";
+$sql = "SELECT title, verse, dateOf, vidLink, imgLink, numImgs FROM Sermons WHERE sermonId IN (1, 2)";
 $result = $link->query($sql);
 $test = mysqli_fetch_assoc($result);
 //returns json object assigned value
