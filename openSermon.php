@@ -20,6 +20,10 @@ while ($row = mysqli_fetch_assoc($result))
     $test[] = $row;
 //returns json object assigned value
 
+$dumbtest = [
+    'dumb' => $test
+];
+
 /*
 $result = [
     "title" => "The Power of Hope",
@@ -31,5 +35,5 @@ $result = [
 ];
 $mockSermon = '{"title":"Who Are The Powerful?", "verse":"Philippians 2: 1-13", "dateOf":"1995-12-17", "vidLink":"NULL", "imgLink":"Dec17_95", "numImgs":"3"}';
 //echo $mockSermon;*/
-echo json_encode($test);
+echo json_encode($dumbtest);
 ?>
