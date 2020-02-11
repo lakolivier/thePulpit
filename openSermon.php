@@ -1,6 +1,4 @@
 <?php
-//output html file
-readfile("openSermon.html");
 //login information for mysql database
 $servername = "rectory.gilbowen.dreamhosters.com";
 $username = "gilbowen";
@@ -14,7 +12,6 @@ if($link -> connect_error){
 }
 //get variables from url using http _get
 $retrieveId = $_GET['sermonId'];
-echo $retrieveId;
 //select from db REQUIRES INPUT OF SERMONID
 $sql = "SELECT title, verse, dateOf, vidLink, imgLink, numImgs FROM Sermons WHERE sermonId = " . $retrieveId;
 $result = $link->query($sql);
