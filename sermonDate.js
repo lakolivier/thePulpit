@@ -23,7 +23,7 @@ $(function() {
                 $("#" + lastDate).after('<div class = "card col-xl-12 my-3 border-0 divYear" id = "' + holdDate + '"></div>');
                 $("#" + holdDate).append('<h2 class = "card-title">' + holdDate + "</h2>")
                 $("#" + holdDate).append('<div class = "card my-1 bg-light border-0" id = "' + holdDate + i + '"><div class = "card-body"></div></div>');
-                $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary">' + jsArr[i]["title"] + "</h4>");
+                $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary"><a href = "openSermon.html?id=' + jsArr[i]["sermonId"] + '">' + jsArr[i]["title"] + '</a></h4>');
                 $("#" + holdDate + i).children("div.card-body").append('<p class = "card-text text-muted">' + jsArr[i]["dateOf"].toDateString() + "</p>");
                 lastDate = holdDate;    
             }
