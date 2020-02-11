@@ -1,6 +1,8 @@
 //gets json object from php file, assigns values to html id
 $(function(){
-    $.get("openSermon.php", {sermonId: 1}, function(jsonObj) {
+    //take current url and pass it to php file
+    let currentUrl = window.location.href;
+    $.get("openSermon.php", {sermonUrl: currentUrl}, function(jsonObj) {
         //convert json to js object
         var jsObj = JSON.parse(jsonObj);
         //if title then assign title

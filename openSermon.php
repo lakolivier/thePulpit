@@ -11,9 +11,13 @@ if($link -> connect_error){
     die("Connection failed: " . $link -> connect_error);
 }
 //get variables from url using http _get
-$retrieveId = $_GET['sermonId'];
+$retrieveUrl = $_GET['sermonUrl'];
+//parse URL to isolate http parameters
+$parsedUrl = parse_url($retrieveUrl);
+$queryString = $parsedUrl["query"];
+parse_str($queryString, $queryStrings);
 //select from db REQUIRES INPUT OF SERMONID
-$sql = "SELECT title, verse, dateOf, vidLink, imgLink, numImgs FROM Sermons WHERE sermonId = " . $retrieveId;
+$sql = 'SELECT title, verse, dateOf, vidLink, imgLink, numImgs FROM Sermons WHERE sermonId = ' . $queryStrings["sermonId"];
 $result = $link->query($sql);
 $test = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
