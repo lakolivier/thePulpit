@@ -1,5 +1,6 @@
 <?php
 //login information for mysql database
+include "openSermon.html";
 $servername = "rectory.gilbowen.dreamhosters.com";
 $username = "gilbowen";
 $password = "!bowen19";
