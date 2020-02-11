@@ -14,7 +14,7 @@ $(function() {
             //if year of current sermon is the same year, append title and date
             if (jsArr[i]["dateOf"].getFullYear() == holdDate) {
                     $("#" + holdDate).append('<div class = "card my-1 bg-light border-0" id = "' + holdDate + i + '"><div class = "card-body"></div></div>');
-                    $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary">' + jsArr[i]["title"] + "</h4>");
+                    $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary"><a href = "openSermon.html?id=' + jsArr[i]["sermonId"] + '">' + jsArr[i]["title"] + '</a></h4>');
                     $("#" + holdDate + i).children("div.card-body").append('<p class = "card-text text-muted">' + jsArr[i]["dateOf"].toDateString() + "</p>");
             }
             //else change holdDate to new year, make new div, append current sermon info

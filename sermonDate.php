@@ -11,7 +11,7 @@ if($link -> connect_error){
     die("Connection failed: " . $link -> connect_error);
 }
 //select from db REQUIRES INPUT OF SERMONID
-$sql = "SELECT title, dateOf FROM Sermons";
+$sql = "SELECT title, dateOf, sermonId FROM Sermons";
 $result = $link->query($sql);
 $test = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
@@ -29,6 +29,7 @@ $result3 = [
     "title" => "Salvation in Self-forgetfulness",
     "dateOf" => "1998-04-15",
 ];
+
 $array = [];
 $array[] = $result;
 $array[] = $result2;
