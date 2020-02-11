@@ -11,15 +11,12 @@ if($link -> connect_error){
     die("Connection failed: " . $link -> connect_error);
 }
 //select from db REQUIRES INPUT OF SERMONID
-/*
-$test = $link -> query("SELECT * FROM Sermons");
-echo json_encode($test);*/
 $sql = "SELECT title, verse, dateOf, vidLink, imgLink, numImgs FROM Sermons WHERE sermonId = 1";
 $result = $link->query($sql);
 $test = mysqli_fetch_all($result, MYSQLI_ASSOC);
-//returns json object assigned value
 
 /*
+//returns json object assigned value
 $result = [
     "title" => "The Power of Hope",
     "verse" => "John 5: 1-9",
@@ -28,8 +25,8 @@ $result = [
     "imgLink" => "Feb6_94",
     "numImgs" => 3
 ];
-$mockSermon = '{"title":"Who Are The Powerful?", "verse":"Philippians 2: 1-13", "dateOf":"1995-12-17", "vidLink":"NULL", "imgLink":"Dec17_95", "numImgs":"3"}';
-//echo $mockSermon;*/
+*/
+
 if (!empty($test)){
     echo json_encode($test[0]);
 }

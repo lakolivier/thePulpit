@@ -1,23 +1,21 @@
 <?php
-/*
 //login information for mysql database
-$servername = "localhost";
+$servername = "rectory.gilbowen.dreamhosters.com";
 $username = "gilbowen";
 $password = "!bowen19";
-$dbname = "theRectory";
+$dbname = "rectory6";
 //start connection
-$conn = new mysqli ($servername, $username, $password, $dbname);
+$link = new mysqli ($servername, $username, $password, $dbname);
 //check connection
-if($conn -> connect_error){
-    die("Connection failed: " . $conn -> connect_error);
+if($link -> connect_error){
+    die("Connection failed: " . $link -> connect_error);
 }
 //select from db REQUIRES INPUT OF SERMONID
-$sql = "SELECT title, verse, dateOf, vidLink, imgLink, numImgs FROM Sermons";
-$result = $conn -> query($sql);
-//returns json object assigned value
-*/
-//make sure to ORDER BY date in select statement.
+$sql = "SELECT title, dateOf FROM Sermons";
+$result = $link->query($sql);
+$test = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
+/*
 $result = [
     "title" => "Who Are The Powerful?",
     //THIS NEEDS TO BE PASSED AS STRING, NOT DATE
@@ -31,13 +29,16 @@ $result3 = [
     "title" => "Salvation in Self-forgetfulness",
     "dateOf" => "1998-04-15",
 ];
-
-
-
 $array = [];
 $array[] = $result;
 $array[] = $result2;
 $array[] = $result3;
+*/
 
-echo json_encode($array);
+if (!empty($test)){
+    echo json_encode($test);
+}
+else{
+    echo json_encode([]);
+}
 ?>
