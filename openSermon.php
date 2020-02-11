@@ -13,7 +13,7 @@ if($link -> connect_error){
 //get variables from url using http _get
 $retrieveId = $_GET['sermonId'];
 //select from db REQUIRES INPUT OF SERMONID
-$sql = "SELECT title, verse, dateOf, vidLink, imgLink, numImgs FROM Sermons WHERE sermonId = $retrieveId";
+$sql = "SELECT title, verse, dateOf, vidLink, imgLink, numImgs FROM Sermons WHERE sermonId = " . $retrieveId;
 $result = $link->query($sql);
 $test = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
