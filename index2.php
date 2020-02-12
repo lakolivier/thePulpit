@@ -16,8 +16,10 @@ $retrieveUrl = $_GET['sermonUrl'];
 $parsedUrl = parse_url($retrieveUrl);
 $queryString = $parsedUrl["query"];
 parse_str($queryString, $queryStrings);
+//pick random id from array
+$randomSermon = rand(1, count($queryStrings))
 //select from db and put into associative array
-$sql = "SELECT title, dateOf, vidLink FROM Sermons WHERE sermonId = " . rand(1, count($queryStrings));
+$sql = "SELECT title, dateOf, vidLink FROM Sermons WHERE sermonId = " . $randomSermon;
 $result = $link->query($sql);
 $test = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
