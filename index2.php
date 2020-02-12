@@ -1,46 +1,42 @@
 <?php
-/*
 //login information for mysql database
-$servername = "localhost";
+$servername = "rectory.gilbowen.dreamhosters.com";
 $username = "gilbowen";
 $password = "!bowen19";
-$dbname = "theRectory";
+$dbname = "rectory6";
 //start connection
-$conn = new mysqli ($servername, $username, $password, $dbname);
+$link = new mysqli ($servername, $username, $password, $dbname);
 //check connection
-if($conn -> connect_error){
-    die("Connection failed: " . $conn -> connect_error);
+if($link -> connect_error){
+    die("Connection failed: " . $link -> connect_error);
 }
-//select from db REQUIRES INPUT OF SERMONID
-$sql = "SELECT title, verse, dateOf, vidLink, imgLink, numImgs FROM Sermons";
-$result = $conn -> query($sql);
-//returns json object assigned value
-*/
-//make sure to ORDER BY date in select statement.
+//get variables from url using http _get
+$retrieveUrl = $_GET['sermonUrl'];
+//parse URL to isolate http parameters
+$parsedUrl = parse_url($retrieveUrl);
+$queryString = $parsedUrl["query"];
+parse_str($queryString, $queryStrings);
+//select from db and put into associative array
+$sql = "SELECT title, dateOf, vidLink FROM Sermons WHERE sermonId = " . rand(1, count($queryStrings));
+$result = $link->query($sql);
+$test = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
+/*
+//returns json object assigned value
 $result = [
     "title" => "The Power of Hope",
-    //THIS NEEDS TO BE PASSED AS STRING, NOT DATE
+    "verse" => "John 5: 1-9",
+    "dateOf" => "1994-02-06",
     "vidLink" => "CiOil1_VBUU",
-    "dateOf" => "1995-12-17",
+    "imgLink" => "Feb6_94",
+    "numImgs" => 3
 ];
-$result2 = [
-    "title" => "The Power of Hope",
-    "vidLink" => "CiOil1_VBUU",
-    "dateOf" => "1995-12-17",
-];
-$result3 = [
-    "title" => "The Power of Hope",
-    "vidLink" => "CiOil1_VBUU",
-    "dateOf" => "1995-12-17",
-];
+*/
 
-
-
-$array = [];
-$array[] = $result;
-$array[] = $result2;
-$array[] = $result3;
-
-echo json_encode($array);
+if (!empty($test)){
+    echo json_encode($test[0]);
+}
+else{
+    echo json_encode([]);
+}
 ?>

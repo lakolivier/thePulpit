@@ -16,8 +16,8 @@ $retrieveUrl = $_GET['sermonUrl'];
 $parsedUrl = parse_url($retrieveUrl);
 $queryString = $parsedUrl["query"];
 parse_str($queryString, $queryStrings);
-//select from db REQUIRES INPUT OF SERMONID
-$sql = 'SELECT title, verse, dateOf, vidLink, imgLink, numImgs FROM Sermons WHERE sermonId = ' . $queryStrings["sermonId"];
+//select from db and put into associative array
+$sql = "SELECT title, verse, dateOf, vidLink, imgLink, numImgs FROM Sermons WHERE sermonId = " . $queryStrings["sermonId"];
 $result = $link->query($sql);
 $test = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
