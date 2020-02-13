@@ -12,9 +12,9 @@ if($link -> connect_error){
 }
 //select from db 
 $sql2 = "SELECT TOP 5 title, dateOf, vidLink FROM Sermons ORDER BY NEWID()";
-echo $sql2;
+$sql3 = "SELECT title, dateOf, vidLink FROM Sermons ORDER BY RAND() LIMIT 9";
 //$sql = "SELECT title, dateOf, vidLink FROM Sermons WHERE sermonId = " . rand(1, count($queryStrings));
-$result = $link->query($sql2);
+$result = $link->query($sql3);
 $test = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 if (!empty($test)){
