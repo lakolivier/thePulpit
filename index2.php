@@ -11,7 +11,8 @@ if($link -> connect_error){
     die("Connection failed: " . $link -> connect_error);
 }
 //select from db 
-$sql2 = "SELECT TOP 5 Id, Name FROM customerNames ORDER BY NEWID()";
+$sql2 = "SELECT TOP 5 title, dateOf, vidLink FROM Sermons ORDER BY NEWID()";
+
 //$sql = "SELECT title, dateOf, vidLink FROM Sermons WHERE sermonId = " . rand(1, count($queryStrings));
 $result = $link->query($sql);
 $test = mysqli_fetch_all($result, MYSQLI_ASSOC);
