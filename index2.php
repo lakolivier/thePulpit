@@ -10,9 +10,9 @@ $link = new mysqli ($servername, $username, $password, $dbname);
 if($link -> connect_error){
     die("Connection failed: " . $link -> connect_error);
 }
-//select from db REQUIRES INPUT OF SERMONID
-$sql = "SELECT title, dateOf, vidLink FROM Sermons WHERE sermonId = " . rand(1, count($queryStrings));
-echo $sql;
+//select from db 
+$sql2 = "SELECT TOP 5 Id, Name FROM customerNames ORDER BY NEWID()";
+//$sql = "SELECT title, dateOf, vidLink FROM Sermons WHERE sermonId = " . rand(1, count($queryStrings));
 $result = $link->query($sql);
 $test = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
