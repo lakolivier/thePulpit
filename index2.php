@@ -14,7 +14,7 @@ if($link -> connect_error){
 $sql2 = "SELECT TOP 5 title, dateOf, vidLink FROM Sermons ORDER BY NEWID()";
 echo $sql2;
 //$sql = "SELECT title, dateOf, vidLink FROM Sermons WHERE sermonId = " . rand(1, count($queryStrings));
-$result = $link->query($sql);
+$result = $link->query($sql2);
 $test = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 if (!empty($test)){
