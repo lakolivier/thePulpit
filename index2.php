@@ -12,6 +12,7 @@ if($link -> connect_error){
 }
 //select from db REQUIRES INPUT OF SERMONID
 $sql = "SELECT title, dateOf, vidLink FROM Sermons WHERE sermonId = " . rand(1, count($queryStrings));
+echo $sql;
 $result = $link->query($sql);
 $test = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
