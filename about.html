@@ -1,26 +1,50 @@
 <!DOCTYPE html>
-<head>
-    <link rel = "stylesheet" type = "text/css" href = "style2.css">
-</head>
-
-<body>
-    <!--Header lives here-->
-    <div class = "header">
-        <a href = "index.html">Think With Dr. Gil Bowen</a>
-    </div>
-    <!--Nav lives here-->
-    <nav>
-    <ul>
-            <li class = "dropMenu">
-                <a href = "sermons.html" class = "dropButton">SERMONS</a>
-                <div class = "dropObjects">                        
-                    <a href = "#" style = "border-right: none;">BY DATE</a>
-                    <a href = "#" style = "border-right: none;">BY TOPIC</a>
-                </div>
+<html>
+    <head>
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
+        <link rel = "stylesheet" href = "/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class = "container">
+        <!--Header lives here-->
+        <header class = "py-3 border-bottom">
+            <div class = "row flex-nowrap justify-content-between align-items-center">
+                <div class = "col-2"></div>
+                <h1 class = "col-8 text-center">
+                    <a class = "text-dark font-weight-bold text-decoration-none" href = "index2.html">Think With Dr. Gil Bowen</a>
+                </h1>
+                <a class = "col-2 d-flex justify-content-end align-items-center" href = "index2.html">
+                        <img src = "/images/header.jpeg" width = "70" height = "70">
+                </a>
+            </div>
+        </header>
+        <!--Nav lives here-->
+        <nav class = "navbar navbar-expand-sm navbar-light">
+        <ul class = "navbar-nav">
+            <li class = "nav-item dropdown">
+                <a class = "nav-link dropdown-toggle" href = "#" id = "navbardrop" data-toggle = "dropdown">SERMONS</a>
+                    <div class = "dropdown-menu">
+                    <a class = "dropdown-item" href = "sermonDate.html">BY DATE</a>
+                    <a class = "dropdown-item" href = "#">BY TOPIC</a>
+                    </div>
             </li>    
-            <li><a href = "readings.html">READINGS</a></li>                <li><a href = "interviews.html">INTERVIEWS</a></li>
-            <li><a href = "about.html" style = "border-right: none;">ABOUT</a></li>
-    </ul>
-    </nav>
-</body>
+            <li class = "nav-item"><a class = "nav-link" href = "readings.html">READINGS</a></li>
+            <li class = "nav-item"><a class = "nav-link"href = "interviews.html">INTERVIEWS</a></li>
+            <li class = "nav-item"><a class = "nav-link"href = "about.html"">ABOUT</a></li>
+        </ul>
+        </nav>
+        <div class = "jumbotron bg-light">
+            <h2>About</h2>
+            <p>New things arise all the time which can tip us into despair - maybe the climate spiraling out of control, or novel viruses threatening humankind, or the waves of polarizing politics - and we may find it hard to sustain hope.  Yet Dr. Gil Bowen reminds us of the inspiring answers that await us in the Christian message. His sermons restore hope and address our most basic questions through skillful weaving of scripture, humor, stories and words from wise thinkers. His sermons and books inspire us to awaken to new views. An article and interview in the June 15, 2016 edition of Chicagoly Magazine by Alan Henry sketches Dr. Bowen’s views on such questions as: Does my life matter? Am I worth anything? What does love between people mean? What about setbacks and loss? Does heaven even exist? And, I mean really. Is Jesus really relevant in today’s world? In the Chicagoly interview, in Dr. Bowen’s books, and over 200 sermons here, you will find not legalistic moralizing, but words to inspire you in the depths of your soul and your mind.</p> 
+            <p>Dr. Gilbert W. Bowen served from 1970-2007 as Senior Minister to of the Kenilworth Union Church, the oldest Christian nondenominational church in the country. The membership grew from 400 to 3200 members during his tenure.  The church and the communities of its members are situated in the northern suburbs of Chicago. Early in his career Dr. Bowen led a congregation in Blue Earth, Minnesota, from which he went on a 2-year pulpit exchange with a congregation in Neuwied, Germany. He also served congregations in Tinley Park and Mount Prospect, Illinois, prior to his time in Kenilworth.  For the past 40 years Dr. Bowen has also maintained a summer ministry at a non-denominational church, Wabaningo Church, on Lake Michigan, in Whitehall, Michigan.</p>
+            <p>Dr. Bowen has catalogued more than three thousand sermons and authored six books. He is offering some of these to you here on this website to stimulate your thinking. His publications include “Toward an Understanding of Bultmann,” McCormick Quarterly; Mit Anderen Zungen Geredet, a collection of Dr. Bowen’s sermons in German; Man and His Hope in the Old Testament by Walter Zimmerli, translated from the German for SCM Press by Gilbert W. Bowen; Becoming a Real Person: Beyond Myself -Faith, Hope and Love; The Way to Go - The Ten Commandments for Today; Daybreak; Thoughts in Passing ; and Christmas Poems. Dr. Bowen also has served on several boards.</p>
+            <p>Dr. Bowen earned a Bachelor of Arts (B.A) from Wheaton College in 1954, a Masters in Divinity (M.Div.) from McCormick Theological Seminary in 1956 and a Doctor of Ministry (D.Min.) from McCormick Theological Seminary in 1976, as well as a Certificate from the Center for Religion and Psychotherapy in that same year. He is an ordained minister in The Presbyterian Church, USA.  Dr. Bowen is also a member of the American Association of Pastoral Counselors and of the Academy of Parish Clergy. He has an Honorary Doctor of Humane Letters from National Lewis University. In 2018 Dr. Bowen received the Legacy of Leadership Award in the Christian Church, which is given to one alumnus/a each year by McKormick Theological Seminary in Chicago, Illinois.</p>
+            <p>Dr. Bowen and his wife Marlene, his dynamic partner in every way, were married for 63 years until her death in 2017. They have 3 children: Kathy Irvin (and her husband Bob), Mark (and his wife Margot), Stephen (and his wife Marnie). And to top it off, he has 7 wonderful grandsons and as of 2020, 3 great-grandsons.  In the above-mentioned article written about him in Chicagoly Magazine, Alan Henry writes that  Gil Bowen in his eighties has “in ‘retirement,’ slowed, but only by degree…he continues to travel and lead tours on three continents; minister during the summer to a congregation at his second home in White Lake, Michigan; officiate at the occasional funeral, wedding and baptism; occasionally preach and lead lecture series at Presbyterian Homes Westminster, and continues to think with others about the big questions. He has an exceptional ability to translate the Christian message into words that address the questions and concerns of the current generation.</p>
+
+        </div>
+    </div>
+        <script src = "jquery-3.4.1.min.js"></script>
+        <script src = "/js/bootstrap.bundle.min.js"></script>
+        <script src = "index2.js"></script>
+    </body>
 </html>
