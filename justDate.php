@@ -14,7 +14,7 @@ if($link -> connect_error){
 $sql = "SELECT DISTINCT dateOf FROM Sermons ORDER BY dateOf";
 $result = $link->query($sql);
 $test = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
+//if pulled data then echo to js file
 if (!empty($test)){
     echo json_encode($test);
 }
