@@ -1,6 +1,6 @@
 //gets json object from php file, assigns values to html ids
 $(function() {
-    $.get("sermonDate.php", function(jsonObj) {
+    $.get("justDate.php", function(jsonObj) {
         //convert json to js object
         var jsArr = JSON.parse(jsonObj);
         //basically plan: select ALL from database in php file, then convert to big ol' json object, then loop thru to display.
