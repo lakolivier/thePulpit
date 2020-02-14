@@ -15,7 +15,7 @@ $(function() {
             if (jsArr[i]["dateOf"].getFullYear() == holdDate) {
                     $("#" + holdDate).append('<div class = "card my-1 bg-light border-0" id = "' + holdDate + i + '"><div class = "card-body"></div></div>');
                     //if sermon has a title, append ELSE display placeholder
-                    if (jsArr[i]["title"]) {
+                    if (jsArr[i]["title"] != NULL) {
                         $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary"><a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none">' + jsArr[i]["title"] + '</a></h4>');
                     }
                     else {
