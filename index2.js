@@ -6,7 +6,7 @@ $(function() {
         //
         for (let i = 0; i < $(jsArr).length; i++) {
             $(".card-columns").append('<div class = "card bg-light border-0" id = "' + i + '"></div>');
-            $("#" + i).append('<div class = "card-body p-1"></div>');
+            $("#" + i).append('<div class = "card-body p-3"></div>');
             $("#" + i).children("div.card-body").append('<h4 class = "card-title"><a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none">' + jsArr[i]["title"] + '</h4>');
             $("#" + i).children("div.card-body").append('<div class = "text-muted">' + jsArr[i]["dateOf"] + '</div>');
             $("#" + i).children("div.card-body").after('<img class = "card-img-bottom" src = "https://img.youtube.com/vi/' + jsArr[i]["vidLink"] + '/hqdefault.jpg">');
