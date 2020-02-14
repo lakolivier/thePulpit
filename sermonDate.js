@@ -35,7 +35,8 @@ $(function() {
                 }
                 else {
                     $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary"><a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none">Unarchived Sermon Title</a></h4>');
-                }                $("#" + holdDate + i).children("div.card-body").append('<p class = "card-text text-muted">' + jsArr[i]["dateOf"].toDateString() + "</p>");
+                }                
+                $("#" + holdDate + i).children("div.card-body").append('<p class = "card-text text-muted">' + jsArr[i]["dateOf"].toDateString() + "</p>");
                 lastDate = holdDate;    
             }
         }
