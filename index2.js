@@ -3,7 +3,7 @@ $(function() {
         //convert json to js object
         var jsArr = JSON.parse(jsonObj);
         $(".jumbotron").after('<div class = "card-columns"></div>');
-        //CHANGE scope of this forloop after plugging in database
+        //
         for (let i = 0; i < $(jsArr).length; i++) {
             $(".card-columns").append('<div class = "card bg-light border-0" id = "' + i + '"></div>');
             $("#" + i).append('<div class = "card-body p-3"></div>');
