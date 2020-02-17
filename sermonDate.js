@@ -44,7 +44,9 @@ $(function() {
             }
         }
     });
+    //pull passed variable from URL, scroll into view
     let currentUrl = window.location.href;
     let splitUrl = currentUrl.split("?");
-    console.log(splitUrl);
+    let targetId = "#" + splitUrl[1];
+    targetId.scrollIntoView();
 });

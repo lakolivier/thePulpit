@@ -15,7 +15,6 @@ $(function() {
             $("#" + lastDate).after('<div class = "card col-xl-12 my-3 border-0 divYear" id = "' + holdDate + '"></div>');
             $("#" + holdDate).append('<h2 class = "card-title"><a href = "sermonDate.html#' + holdDate + '" class = "text-decoration-none">' + holdDate + "</a></h2>");
             lastDate = holdDate;
-        
         }
     });
 });
