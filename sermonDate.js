@@ -1,6 +1,8 @@
 //gets json object from php file, assigns values to html ids
 $(function() {
     $.get("sermonDate.php", function(jsonObj) {
+        //configure options for toLocaleDateString
+        options.timeZone = "UTC"
         //convert json to js object
         var jsArr = JSON.parse(jsonObj);
         //basically plan: select ALL from database in php file, then convert to big ol' json object, then loop thru to display.
@@ -21,7 +23,7 @@ $(function() {
                     else {
                         $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary"><a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none">Unarchived Sermon Title</a></h4>');
                     }
-                    $("#" + holdDate + i).children("div.card-body").append('<p class = "card-text text-muted">' + jsArr[i]["dateOf"].toUTCString() + "</p>");
+                    $("#" + holdDate + i).children("div.card-body").append('<p class = "card-text text-muted">' + jsArr[i]["dateOf"].toLocaleDateString('en-US', options) + "</p>");
             }
             //else change holdDate to new year, make new div, append current sermon info
             else {
