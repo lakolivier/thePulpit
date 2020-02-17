@@ -42,18 +42,10 @@ $(function() {
                 lastDate = holdDate;    
             }
         }
+    //scrolls page to element selected when mouse "enters" document.
     let currentUrl = window.location.href;
     let splitUrl = currentUrl.split("#");
     let targetId = document.getElementById(splitUrl[1]);
     targetId.scrollIntoView();
     });
 });
-/*
-//scrolls page to element selected when mouse "enters" document. "bug" is that it rescrolls when leaving frame
-$(document).on("mouseenter", function() {
-    //pull passed variable from URL, scroll into view
-    let currentUrl = window.location.href;
-    let splitUrl = currentUrl.split("#");
-    let targetId = document.getElementById(splitUrl[1]);
-    targetId.scrollIntoView();
-    });*/
