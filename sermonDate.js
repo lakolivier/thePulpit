@@ -46,7 +46,7 @@ $(function() {
     });
     //pull passed variable from URL, scroll into view
     let currentUrl = window.location.href;
-    let splitUrl = currentUrl.split("?");
+    let splitUrl = currentUrl.split("#");
     let targetId = document.getElementById(splitUrl[1]);
     console.log (splitUrl);
     console.log(targetId);
