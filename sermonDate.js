@@ -44,7 +44,7 @@ $(function() {
             }
         }
     });
-    $(function() {
+    $(document).ready(function() {
     //pull passed variable from URL, scroll into view
     let currentUrl = window.location.href;
     let splitUrl = currentUrl.split("#");
