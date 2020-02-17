@@ -46,7 +46,7 @@ $(function() {
     });
 });
 //scrolls page to element selected
-$("#pageContainer").on("mousemove", function() {
+$("#pageContainer").on("trigger", function() {
     console.log("anything");
     //pull passed variable from URL, scroll into view
     let currentUrl = window.location.href;
