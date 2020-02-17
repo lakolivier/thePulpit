@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
+        <link rel = "stylesheet" href = "/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class = "container">
+        <!--Header lives here-->
+        <header class = "py-3 border-bottom">
+            <div class = "row flex-nowrap justify-content-between align-items-center">
+                <div class = "col-2"></div>
+                <h1 class = "col-8 text-center">
+                    <a class = "text-dark font-weight-bold text-decoration-none" href = "index.html">Think With Dr. Gil Bowen</a>
+                </h1>
+                <a class = "col-2 d-flex justify-content-end align-items-center" href = "index.html">
+                        <img src = "/images/header.jpeg" width = "70" height = "70">
+                </a>
+            </div>
+        </header>
+        <!--Nav lives here-->
+        <nav class = "navbar navbar-expand-sm navbar-light">
+        <ul class = "navbar-nav">
+            <li class = "nav-item dropdown">
+                <a class = "nav-link dropdown-toggle" href = "#" id = "navbardrop" data-toggle = "dropdown">SERMONS</a>
+                    <div class = "dropdown-menu">
+                    <a class = "dropdown-item" href = "justDate.html">BY DATE</a>
+                    <a class = "dropdown-item" href = "justTags.html">BY TOPIC</a>
+                    </div>
+            </li>    
+            <li class = "nav-item"><a class = "nav-link" href = "readings.html">READINGS</a></li>
+            <li class = "nav-item"><a class = "nav-link"href = "interviews.html">INTERVIEWS</a></li>
+            <li class = "nav-item"><a class = "nav-link"href = "about.html"">ABOUT</a></li>
+        </ul>
+        </nav>
+        <h2 class = "text-center">Sermons by Topic</h2>
+        <!--container for sermon years-->
+        <div class = "container" id = "allTags"></div>
+        </div>
+        <script src = "jquery-3.4.1.min.js"></script>
+        <script src = "/js/bootstrap.bundle.min.js"></script>
+        <script src = "justTags.js"></script>
+    </body>
+</html>
