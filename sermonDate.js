@@ -48,7 +48,7 @@ $(function() {
     let currentUrl = window.location.href;
     let splitUrl = currentUrl.split("#");
     let targetId = document.getElementById(splitUrl[1]);
-    console.log (splitUrl[1]);
+    console.log (splitUrl[0]);
     console.log(targetId);
     targetId.scrollIntoView();
 });
