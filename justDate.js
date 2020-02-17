@@ -7,7 +7,7 @@ $(function() {
         let holdDate = new Date(jsArr[0]["YEAR(dateOf)"]).getUTCFullYear();
         let lastDate = holdDate;
         $("#allYears").append('<div class = "card col-xl-12 my-3 border-0 divYear" id = "' + holdDate + '"></div>');
-        $("#" + holdDate).append('<h2 class = "card-title"><a href = "sermonDate.html#' + holdDate + '" class = "text-dark text-decoration-none">' + holdDate + "</a></h2>");
+        $("#" + holdDate).append('<h2 class = "card-title"><a href = "sermonDate.html#' + holdDate + '" class = "text-dark text-decoration-none border-bottom">' + holdDate + "</a></h2>");
         for (let i = 1; i < $(jsArr).length; i++) {
             jsArr[i]["YEAR(dateOf)"] = new Date(jsArr[i]["YEAR(dateOf)"]);
             let holdDate = jsArr[i]["YEAR(dateOf)"].getUTCFullYear();
