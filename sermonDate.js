@@ -45,8 +45,8 @@ $(function() {
         }
     });
 });
-//scrolls page to element selected
-$("#pageContainer").on("mouseenter", function() {
+//scrolls page to element selected when mouse "enters"
+$(document).on("mouseenter", function() {
     console.log("anything");
     //pull passed variable from URL, scroll into view
     let currentUrl = window.location.href;
