@@ -42,8 +42,13 @@ $(function() {
                 lastDate = holdDate;    
             }
         }
+    let currentUrl = window.location.href;
+    let splitUrl = currentUrl.split("#");
+    let targetId = document.getElementById(splitUrl[1]);
+    targetId.scrollIntoView();
     });
 });
+/*
 //scrolls page to element selected when mouse "enters" document. "bug" is that it rescrolls when leaving frame
 $(document).on("mouseenter", function() {
     //pull passed variable from URL, scroll into view
@@ -51,4 +56,4 @@ $(document).on("mouseenter", function() {
     let splitUrl = currentUrl.split("#");
     let targetId = document.getElementById(splitUrl[1]);
     targetId.scrollIntoView();
-    });
+    });*/
