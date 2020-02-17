@@ -44,11 +44,12 @@ $(function() {
             }
         }
     });
-    $("#pageContainer").on("load", function() {
+});
+//scrolls page to element selected
+$("#pageContainer").on("load", function() {
     //pull passed variable from URL, scroll into view
     let currentUrl = window.location.href;
     let splitUrl = currentUrl.split("#");
     console.log(document.getElementById("2003"));
     //targetId.scrollIntoView();
     });
-});
