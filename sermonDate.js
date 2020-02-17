@@ -45,9 +45,8 @@ $(function() {
         }
     });
 });
-//scrolls page to element selected when mouse "enters"
+//scrolls page to element selected when mouse "enters" document. "bug" is that it rescrolls when leaving frame
 $(document).on("mouseenter", function() {
-    console.log("anything");
     //pull passed variable from URL, scroll into view
     let currentUrl = window.location.href;
     let splitUrl = currentUrl.split("#");
