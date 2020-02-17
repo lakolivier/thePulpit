@@ -2,7 +2,7 @@
 $(function() {
     $.get("sermonDate.php", function(jsonObj) {
         //configure options for toLocaleDateString
-        options.timeZone = "UTC"
+        options.timeZone = "UTC";
         //convert json to js object
         var jsArr = JSON.parse(jsonObj);
         //basically plan: select ALL from database in php file, then convert to big ol' json object, then loop thru to display.
