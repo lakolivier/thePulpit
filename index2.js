@@ -14,7 +14,7 @@ $(function() {
                 $("#" + i).children("div.card-body").after('<img class = "card-img-bottom" src = "https://img.youtube.com/vi/' + jsArr[i]["vidLink"] + '/hqdefault.jpg">');
             }
             else
-                $("#" + i).children("div.card-body").append('<img class = "img-fluid card-img-bottom" src = "images/scans/' + jsArr[i]["imgLink"] + 'a.jpg">')
+                $("#" + i).children("div.card-body").append('<img class = "my-1 img-fluid card-img-bottom" src = "images/scans/' + jsArr[i]["imgLink"] + 'a.jpg">')
             //clip img source's black borders
             $(".card").children("img").css("clip-path", "polygon(12.5% 12.5%, 12.5% 87.5%, 87.5% 87.5%, 87.5% 12.5%)");
         }
