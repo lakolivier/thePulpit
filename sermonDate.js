@@ -42,7 +42,7 @@ $(function() {
                 lastDate = holdDate;    
             }
         }
-    //scrolls page to element selected when mouse "enters" document.
+    //scrolls page to element selected
     let currentUrl = window.location.href;
     let splitUrl = currentUrl.split("#");
     let targetId = document.getElementById(splitUrl[1]);
