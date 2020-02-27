@@ -2,7 +2,7 @@
 $(function(){
     //take current url
     let currentUrl = window.location.href;
-    let splitUrl = currentUrl.split("#");
+    let splitUrl = currentUrl.split("?");
     let targetId = document.getElementById(splitUrl[1]);
     console.log(targetId);
     switch(targetId){
