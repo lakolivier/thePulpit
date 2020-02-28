@@ -1,14 +1,18 @@
 //gets json object from php file, assigns values to html id
 $(function(){
-    //take current url
+    //take current url split off value pair
     let currentUrl = window.location.href;
     let splitUrl = currentUrl.split("=");
-    console.log(splitUrl[1]);
+    //display reading based on passed value
     switch(splitUrl[1]){
         case "beyondMyself":
-            console.log(splitUrl[1]);
             $("#sermonTitle").html("Beyond Myself: Faith Hope Live");
             $("#bookBox").attr("src", "https://drive.google.com/file/d/1nvNQ1oXZQ3JVIMQ3QiQACglIl4go4b8e/preview");
+            break;
+        case "xmasPoems":
+            $("sermonTitle").html("Christmas Poems");
+            $("#bookBox").attr("src", "https://drive.google.com/file/d/1rg7lmW8OHbR7BBev8I7pMo4HYrwArS_n/preview");
+            $("bookBox").after('<iframe id = "bookBox2" src = "https://drive.google.com/file/d/1l7iAvCtgOpSFe_hIkY9ZUvlvMLB1A2ul/preview" width=100% height=auto></iframe>');
             break;
     }
 });
