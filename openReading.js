@@ -18,5 +18,9 @@ $(function(){
             $("#sermonTitle").html("The Way To Go: Ten Commandments For Today");
             $("#bookBox").attr("src", "https://drive.google.com/file/d/1cDV6eqIC9KfJeal9OMe2mhZBrcAmKhom/preview");
             break;
+            case "thoughts":
+                $("#sermonTitle").html("Thoughts In Passing");
+                $("#bookBox").attr("src", "https://drive.google.com/file/d/1ahCA5SAYzd63lg4fXhGhfk13q8ntY0Vw/preview");
+                break;
     }
 });
