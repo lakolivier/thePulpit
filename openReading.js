@@ -22,5 +22,12 @@ $(function(){
                 $("#sermonTitle").html("Thoughts In Passing");
                 $("#bookBox").attr("src", "https://drive.google.com/file/d/1ahCA5SAYzd63lg4fXhGhfk13q8ntY0Vw/preview");
                 break;
+        case "sermonettes":
+            $("#sermonTitle").html("Think About It: Sermonettes");
+                $("#bookBox").attr("src", "https://drive.google.com/file/d/1VMsB9u3XvJhBCAAoczl4yBUVc66Fd6Oa/preview");
+                break;
+        default:
+            $("#sermonTitle").html("No Book Found");
+            break;
     }
 });
