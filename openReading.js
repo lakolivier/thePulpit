@@ -2,7 +2,7 @@
 $(function(){
     //take current url
     let currentUrl = window.location.href;
-    let splitUrl = currentUrl.split("?");
+    let splitUrl = currentUrl.split("=");
     console.log(splitUrl[1]);
     switch(splitUrl[1]){
         case "beyondMyself":
