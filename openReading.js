@@ -12,7 +12,7 @@ $(function(){
         case "xmasPoems":
             $("sermonTitle").html("Christmas Poems");
             $("#bookBox").attr("src", "https://drive.google.com/file/d/1rg7lmW8OHbR7BBev8I7pMo4HYrwArS_n/preview");
-            $("#bookBox").after('<div class = "embed-responsive embed-responsive-16by9"><iframe id = "bookBox2" src = "https://drive.google.com/file/d/1l7iAvCtgOpSFe_hIkY9ZUvlvMLB1A2ul/preview" width=100% height=auto></iframe></div>');
+            $("#bookBox").after('<div class = "embed-responsive embed-responsive-16by9 my-1"><iframe id = "bookBox2" src = "https://drive.google.com/file/d/1l7iAvCtgOpSFe_hIkY9ZUvlvMLB1A2ul/preview" width=100% height=auto></iframe></div>');
             break;
     }
 });
