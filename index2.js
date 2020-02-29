@@ -11,7 +11,8 @@ $(function() {
             $("#" + i).children("div.card-body").append('<div class = "text-muted">' + jsArr[i]["dateOf"] + '</div>');
             //if there's a video file, append video thumbnail, else append sermon img a
             if (jsArr[i]["vidLink"]) {
-                $("#" + i).children("div.card-body").after('<div class = "position-relative"><img class = "card-img-bottom" src = "https://img.youtube.com/vi/' + jsArr[i]["vidLink"] + '/hqdefault.jpg"></div>');
+                //when appending video thumbnail, add play icon atop it
+                $("#" + i).children("div.card-body").after('<div class = "position-relative"><img class = "card-img-bottom" src = "https://img.youtube.com/vi/' + jsArr[i]["vidLink"] + '/hqdefault.jpg"><a href = "https://img.youtube.com/vi/' + jsArr[i]["vidLink"] + '/hqdefault.jpg"><i class="fas fa-play"></i></a></div>');
             }
             else
                 $("#" + i).children("div.card-body").after('<div><img class = "my-1 img-fluid card-img-bottom" src = "images/scans/' + jsArr[i]["imgLink"] + 'a.jpg"></div>')
