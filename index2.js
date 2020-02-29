@@ -3,7 +3,7 @@ $(function() {
         //convert json to js object
         var jsArr = JSON.parse(jsonObj);
         $(".jumbotron").after('<div class = "card-columns"></div>');
-        //
+        //spit out the 9 sermons pulled from .get
         for (let i = 0; i < $(jsArr).length; i++) {
             $(".card-columns").append('<div class = "card bg-light border-0" id = "' + i + '"></div>');
             $("#" + i).append('<div class = "card-body p-3"></div>');
@@ -11,7 +11,7 @@ $(function() {
             $("#" + i).children("div.card-body").append('<div class = "text-muted">' + jsArr[i]["dateOf"] + '</div>');
             //if there's a video file, append video thumbnail, else append sermon img a
             if (jsArr[i]["vidLink"]) {
-                $("#" + i).children("div.card-body").after('<img class = "card-img-bottom" src = "https://img.youtube.com/vi/' + jsArr[i]["vidLink"] + '/hqdefault.jpg">');
+                $("#" + i).children("div.card-body").after('<div class = "position-relative"><img class = "card-img-bottom" src = "https://img.youtube.com/vi/' + jsArr[i]["vidLink"] + '/hqdefault.jpg"></div>');
             }
             else
                 $("#" + i).children("div.card-body").append('<img class = "my-1 img-fluid card-img-bottom" src = "images/scans/' + jsArr[i]["imgLink"] + 'a.jpg">')
@@ -20,3 +20,12 @@ $(function() {
         }
     });
 });
+/*
+<div class="img-download">
+  <!-- image of dog -->
+  <img src="https://loremflickr.com/320/240/dog" width="320" height="240" alt="dog">
+  
+  <!-- download icon -->
+  <a href="https://loremflickr.com/320/240/dog" download="dog.jpg"><i class="fas fa-download"></i> Download</a>
+</div>
+*/
