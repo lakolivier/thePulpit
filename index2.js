@@ -15,9 +15,11 @@ $(function() {
                 $("#" + i).children("div.card-body").append('<div class = "position-relative"><img class = "card-img-bottom" src = "https://img.youtube.com/vi/' + jsArr[i]["vidLink"] + '/hqdefault.jpg"><a id = "vid' + i + '" href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "position-absolute"><i class="fas fa-play fa-2x"></i></a></div>');
                 $("#vid" + i).css({"bottom":"45%", "left":"45%"});
             }
-            else
-                $("#" + i).children("div.card-body").append('<div><img class = "my-1 img-fluid card-img-bottom" src = "images/scans/' + jsArr[i]["imgLink"] + 'a.jpg"></div>')
-            //clip img source's black borders
+            else {
+                $("#" + i).children("div.card-body").append('<div class = "position-relative"><img class = "my-1 img-fluid card-img-bottom" src = "images/scans/' + jsArr[i]["imgLink"] + 'a.jpg"><a id = "img' + i + '" href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "position-absolute"><i class="fas fa-images fa-2x"></i></a></div>');
+                $("#vid" + i).css({"bottom":"45%", "left":"45%"});
+            }
+                //clip img source's black borders
             $(".card").children("img").css("clip-path", "polygon(12.5% 12.5%, 12.5% 87.5%, 87.5% 87.5%, 87.5% 12.5%)");
         }
     });
