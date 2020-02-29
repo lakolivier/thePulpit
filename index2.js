@@ -5,7 +5,7 @@ $(function() {
         $(".jumbotron").after('<div class = "card-columns"></div>');
         //spit out the 9 sermons pulled from .get
         for (let i = 0; i < $(jsArr).length; i++) {
-            $(".card-columns").append('<div class = "card bg-light text-dark border-0" id = "' + i + '"></div>');
+            $(".card-columns").append('<div class = "card bg-light text-primary border-0" id = "' + i + '"></div>');
             $("#" + i).append('<div class = "card-body p-3"></div>');
             $("#" + i).children("div.card-body").append('<h4 class = "card-title"><a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none">' + jsArr[i]["title"] + '</h4>');
             $("#" + i).children("div.card-body").append('<div class = "text-muted">' + jsArr[i]["dateOf"] + '</div>');
