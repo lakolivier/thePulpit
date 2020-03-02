@@ -12,7 +12,7 @@ $(function() {
             //if there's a video file, append video thumbnail, else append sermon img a
             if (jsArr[i]["vidLink"]) {
                 //when appending video thumbnail, add play icon atop it
-                $("#" + i).children("div.card-body").append('<div class = "position-relative"><img class = "card-img-bottom" src = "https://img.youtube.com/vi/' + jsArr[i]["vidLink"] + '/hqdefault.jpg"><a id = "vid' + i + '" href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "position-absolute"><i class="fas fa-play fa-2x text-dark"></i></a></div>');
+                $("#" + i).children("div.card-body").append('<div class = "position-relative"><img class = "card-img-bottom" src = "https://img.youtube.com/vi/' + jsArr[i]["vidLink"] + '/hqdefault.jpg"><a id = "vid' + i + '" href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "position-absolute"><i class="fas fa-play fa-2x text-light"></i></a></div>');
                 $("#vid" + i).css({"bottom":"45%", "left":"45%"});
             }
             else {
