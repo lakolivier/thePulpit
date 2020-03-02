@@ -12,6 +12,7 @@ if($link -> connect_error){
 }
 //select from db REQUIRES INPUT OF SERMONID
 $sql = "SELECT title, dateOf, sermonId FROM Sermons ORDER BY dateOf";
+echo $sql;
 $result = $link->query($sql);
 $test = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
