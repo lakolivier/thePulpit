@@ -15,6 +15,7 @@ if($link -> connect_error){
 $sql = "SELECT title, dateOf, sermonId FROM Sermons ORDER BY dateOf";
 $sql3 = "SELECT title, dateOf, vidLink, imgLink, sermonId FROM Sermons ORDER BY RAND() LIMIT 9";
 echo $sql3;
+$result3 = $link->query($sql3);
 $result = $link->query($sql);
 //echo $result;
 $test = mysqli_fetch_all($result, MYSQLI_ASSOC);
