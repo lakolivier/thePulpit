@@ -11,7 +11,7 @@ if($link -> connect_error){
     die("Connection failed: " . $link -> connect_error);
 }
 //select from db
-$sql = "SELECT tagId, tagName FROM tags ORDER BY tagName";
+$sql = "SELECT tagName FROM tags ORDER BY tagName";
 $result = $link->query($sql);
 $test = mysqli_fetch_all($result, MYSQLI_ASSOC);
 //if pulled data then echo to js file
