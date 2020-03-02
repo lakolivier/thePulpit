@@ -7,7 +7,11 @@ $(function() {
         for (let i = 0; i < $(jsArr).length; i++) {
             $(".card-columns").append('<div class = "card bg-light border-0" id = "' + i + '"></div>');
             $("#" + i).append('<div class = "card-body p-3"></div>');
-            $("#" + i).children("div.card-body").append('<h4 class = "card-title"><a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none text-dark">' + jsArr[i]["title"] + '</h4>');
+            //if sermon has title, append. if not, placeholder
+            if (jsArr[i]["title"])
+                $("#" + i).children("div.card-body").append('<h4 class = "card-title"><a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none text-dark">' + jsArr[i]["title"] + '</h4>');
+            else
+                $("#" + i).children("div.card-body").append('<h4 class = "card-title"><a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none text-dark">Unarchived Sermon Title</h4>');
             $("#" + i).children("div.card-body").append('<div class = "text-muted">' + jsArr[i]["dateOf"] + '</div>');
             //if there's a video file, append video thumbnail, else append sermon img a
             if (jsArr[i]["vidLink"]) {
