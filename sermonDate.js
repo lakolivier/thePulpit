@@ -10,7 +10,7 @@ $(function() {
         let holdDate = new Date(jsArr[0]["dateOf"]).getUTCFullYear();
         let lastDate = holdDate;
         $("#allYears").append('<div class = "card col-xl-12 my-3 border-0 divYear" id = "' + holdDate + '"></div>');
-        $("#" + holdDate).append('<h2 class = "card-title">' + holdDate + "</h2>")
+        $("#" + holdDate).append('<h2 class = "card-title">' + holdDate + "</h2>");
         for (let i = 0; i < $(jsArr).length; i++) {
             jsArr[i]["dateOf"] = new Date(jsArr[i]["dateOf"]);
             //if year of current sermon is the same year, append title and date
