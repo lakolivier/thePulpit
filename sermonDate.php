@@ -6,6 +6,7 @@ $password = "!bowen19";
 $dbname = "rectory6";
 //start connection
 $link = new mysqli ($servername, $username, $password, $dbname);
+echo $link;
 //check connection
 if($link -> connect_error){
     die("Connection failed: " . $link -> connect_error);
