@@ -1,5 +1,6 @@
 //gets json object from php file, assigns values to html ids
 $(function() {
+    console.log("great job");
     $.get("sermonDate.php", function(jsonObj) {
         //configure options for toLocaleDateString
         var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -9,7 +10,6 @@ $(function() {
         //select ALL from database in php file, then convert to big ol' json object, then loop thru to display.
         let holdDate = new Date(jsArr[0]["dateOf"]).getUTCFullYear();
         let lastDate = holdDate;
-        console.log("great job");
         console.log(jsArr[0]["dateOf"]);
         $("#allYears").append('<div class = "card col-xl-12 my-3 border-0 divYear" id = "' + holdDate + '"></div>');
         $("#" + holdDate).append('<h2 class = "card-title">' + holdDate + "</h2>");
