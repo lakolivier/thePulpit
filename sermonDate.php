@@ -12,7 +12,9 @@ if($link -> connect_error){
     die("Connection failed: " . $link -> connect_error);
 }
 //select from db REQUIRES INPUT OF SERMONID
-$sql = "SELECT * FROM Sermons ORDER BY dateOf";
+$sql = "SELECT title, dateOf, sermonId FROM Sermons ORDER BY dateOf";
+$sql3 = "SELECT title, dateOf, vidLink, imgLink, sermonId FROM Sermons ORDER BY RAND() LIMIT 9";
+echo $sql3;
 $result = $link->query($sql);
 //echo $result;
 $test = mysqli_fetch_all($result, MYSQLI_ASSOC);
