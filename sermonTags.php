@@ -11,9 +11,11 @@ if($link -> connect_error){
     die("Connection failed: " . $link -> connect_error);
 }
 //select from db REQUIRES INPUT OF SERMONID
-$sql = "SELECT Sermons.title, Sermons.dateOf, Sermons.sermonId, tags.tagName, tags.tagId, SermonsTags.tagId, SermonsTags.sermonId
-INNER JOIN Sermons.sermonId ON SermonsTags.sermonId, tags.tagId ON SermonsTags.tagId
-ORDER BY tagId";
+$sql = "SELECT s.title, s.dateOf, s.sermonId, t.tagName, t.tagId, st.tagId, st.sermonId 
+FROM Sermons AS s
+INNER JOIN SermonTags AS st ON st.sermonId = s.sermonId
+INNER JOIN Tags AS t ON t.tagId = st.tagId
+ORDER BY t.tagId";
 $result = $link->query($sql);
 $test = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
@@ -24,3 +26,4 @@ else{
     echo json_encode([]);
 }
 ?>
+
