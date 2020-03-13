@@ -1,7 +1,7 @@
 //gets json object from php file, assigns values to html ids
 $(function() {
     $.get("sermonDate.php", function(jsonObj) {
-        console.log("great job");
+        console.log(jsonObj);
         //configure options for toLocaleDateString
         var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         options.timeZone = "UTC";
