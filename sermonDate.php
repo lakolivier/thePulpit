@@ -17,14 +17,12 @@ $sql3 = "SELECT title, dateOf, sermonId FROM Sermons ORDER BY dateOf";
 $result = $link->query($sql3);
 $test = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-echo('AHHHHHHHHHHHHHHHHHHH');
-
 if (!empty($test)){
     echo('uhh?');
+    var_dump($test);
     echo json_encode($test);
 }
 else{
-    //echo json_encode([]);
-    echo('AHHHHHHHHHHHHHHHHHHH');
+    echo json_encode([]);
 }
 ?>
