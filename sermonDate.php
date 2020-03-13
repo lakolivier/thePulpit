@@ -11,7 +11,8 @@ if($link -> connect_error){
     die("Connection failed: " . $link -> connect_error);
 }
 //select from db 
-$sql3 = "SELECT title, dateOf, sermonId FROM Sermons ORDER BY dateOf";
+//$sql2 = "SELECT TOP 9 title, dateOf, vidLink FROM Sermons ORDER BY NEWID()";
+$sql3 = "SELECT title, dateOf, vidLink, imgLink, sermonId FROM Sermons ORDER BY RAND() LIMIT 9";
 $result = $link->query($sql3);
 $test = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
