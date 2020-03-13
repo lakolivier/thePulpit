@@ -14,7 +14,7 @@ if($link -> connect_error){
 $sql = "SELECT s.title, s.dateOf, s.sermonId, t.tagName, t.tagId, st.tagId, st.sermonId 
 FROM Sermons AS s
 INNER JOIN SermonsTags AS st ON st.sermonId = s.sermonId
-INNER JOIN Tags AS t ON t.tagId = st.tagId
+INNER JOIN tags AS t ON t.tagId = st.tagId
 ORDER BY t.tagId";
 $result = $link->query($sql);
 $test = mysqli_fetch_all($result, MYSQLI_ASSOC);
