@@ -21,6 +21,7 @@ if (!empty($test)){
     echo json_encode($test);
 }
 else{
-    echo json_encode([]);
+    //echo json_encode([]);
+    echo('AHHHHHHHHHHHHHHHHHHH');
 }
 ?>
