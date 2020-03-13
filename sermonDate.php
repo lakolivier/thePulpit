@@ -20,6 +20,7 @@ $test = mysqli_fetch_all($result, MYSQLI_ASSOC);
 echo('AHHHHHHHHHHHHHHHHHHH');
 
 if (!empty($test)){
+    echo('uhh?');
     echo json_encode($test);
 }
 else{
