@@ -13,7 +13,7 @@ if($link -> connect_error){
 //select from db REQUIRES INPUT OF SERMONID
 $sql = "SELECT s.title, s.dateOf, s.sermonId, t.tagName, t.tagId, st.tagId, st.sermonId 
 FROM Sermons AS s
-INNER JOIN SermonTags AS st ON st.sermonId = s.sermonId
+INNER JOIN SermonsTags AS st ON st.sermonId = s.sermonId
 INNER JOIN Tags AS t ON t.tagId = st.tagId
 ORDER BY t.tagId";
 $result = $link->query($sql);
