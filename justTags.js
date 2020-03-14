@@ -5,11 +5,11 @@ $(function() {
         //trim whitespace of tag
         let trimTag = jsArr[0]["tagName"].replace(/\s/g, "");
         let lastTag = trimTag;
-        $("#allTags").append('<div class = "card col-8 my-3 border-0 mx-auto" id = "' + trimTag + '"></div>');
+        $("#allTags").append('<div class = "card rounded-0 col-8 my-3 border-0 mx-auto" id = "' + trimTag + '"></div>');
         $("#" + trimTag).append('<h2 class = "card-title margin-0 border-bottom"><a href = "sermonTags.html#' + trimTag + '" class = "text-dark text-decoration-none">' + jsArr[0]["tagName"] + '</a></h2>');
         for (let i = 1; i < $(jsArr).length; i++) {
             trimTag = jsArr[i]["tagName"].replace(/\s/g, "");
-            $("#" + lastTag).after('<div class = "card col-8 my-3 border-0 mx-auto" id = "' + trimTag + '"></div>');
+            $("#" + lastTag).after('<div class = "card rounded-0 col-8 my-3 border-0 mx-auto" id = "' + trimTag + '"></div>');
             $("#" + trimTag).append('<h2 class = "card-title margin-0 border-bottom"><a href = "sermonTags.html#' + trimTag + '" class = "text-dark text-decoration-none">' + jsArr[i]["tagName"] + '</a></h2>');
             lastTag = trimTag;
         }
