@@ -5,13 +5,13 @@ $(function() {
         $(".jumbotron").after('<div class = "card-columns"></div>');
         //spit out the 9 sermons pulled from .get
         for (let i = 0; i < $(jsArr).length; i++) {
-            $(".card-columns").append('<div class = "card bg-light border-0" id = "' + i + '"></div>');
+            $(".card-columns").append('<a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none text-dark"><div class = "card bg-light border-0" id = "' + i + '"></div></a>');
             $("#" + i).append('<div class = "card-body p-3"></div>');
             //if sermon has title, append. if not, placeholder
             if (jsArr[i]["title"])
-                $("#" + i).children("div.card-body").append('<h4 class = "card-title"><a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none text-dark">' + jsArr[i]["title"] + '</h4>');
+                $("#" + i).children("div.card-body").append('<h4 class = "card-title">' + jsArr[i]["title"] + '</h4>');
             else
-                $("#" + i).children("div.card-body").append('<h4 class = "card-title"><a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none text-dark">Unarchived Sermon Title</h4>');
+                $("#" + i).children("div.card-body").append('<h4 class = "card-title">Unarchived Sermon Title</h4>');
             $("#" + i).children("div.card-body").append('<div class = "text-muted">' + jsArr[i]["dateOf"] + '</div>');
             //if there's a video file, append video thumbnail, else append sermon img a
             if (jsArr[i]["vidLink"]) {
