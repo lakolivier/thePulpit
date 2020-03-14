@@ -15,7 +15,6 @@ $(function() {
         for (let i = 0; i < $(jsArr).length; i++) {
             console.log("hello sir");
             jsArr[i]["dateOf"] = new Date(jsArr[i]["dateOf"]);
-            trimTag = jsArr[i]["tagName"].replace(/\s/g, "");
             //if tag of current sermon is the same tag, append title and date
             if (jsArr[i]["tagName"].replace(/\s/g, "") == trimTag) {
                 console.log(jsArr[i]["tagName"]);
