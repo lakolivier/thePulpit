@@ -28,12 +28,3 @@ $(function() {
         }
     });
 });
-/*
-<div class="img-download">
-  <!-- image of dog -->
-  <img src="https://loremflickr.com/320/240/dog" width="320" height="240" alt="dog">
-  
-  <!-- download icon -->
-  <a href="https://loremflickr.com/320/240/dog" download="dog.jpg"><i class="fas fa-download"></i> Download</a>
-</div>
-*/
