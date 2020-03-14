@@ -18,6 +18,10 @@ $(function(){
         if (jsObj.vidLink) {
             $("#sermonVid").attr("src", "https://www.youtube.com/embed/" + jsObj.vidLink);
         }
+        else {
+            $("#sermonVid").remove();
+        }
+        if (jsObj.imgLink){
         //loop this until numImgs is exhausted
         let suffix = 'a';
         let sermonText = [];
@@ -35,6 +39,7 @@ $(function(){
             }
             //increment suffix char
             suffix = String.fromCharCode(suffix.charCodeAt(0) + 1);
+        }
         }
     });
 });
