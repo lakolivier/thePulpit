@@ -15,13 +15,13 @@ $(function() {
             jsArr[i]["dateOf"] = new Date(jsArr[i]["dateOf"]);
             //if year of current sermon is the same year, append title and date
             if (jsArr[i]["dateOf"].getUTCFullYear() == holdDate) {
-                    $("#" + holdDate).append('<div class = "card my-1 bg-light border-0" id = "' + holdDate + i + '"><div class = "card-body"></div></div>');
+                    $("#" + holdDate).append('<a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none"><div class = "card my-1 bg-light border-0" id = "' + holdDate + i + '"><div class = "card-body"></div></div></a>');
                     //if sermon has a title, append ELSE display placeholder
                     if (jsArr[i]["title"]) {
-                        $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary"><a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none">' + jsArr[i]["title"] + '</a></h4>');
+                        $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary">' + jsArr[i]["title"] + '</h4>');
                     }
                     else {
-                        $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary"><a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none">Unarchived Sermon Title</a></h4>');
+                        $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary">Unarchived Sermon Title</h4>');
                     }
                     $("#" + holdDate + i).children("div.card-body").append('<p class = "card-text text-muted">' + jsArr[i]["dateOf"].toLocaleDateString('en-US', options) + "</p>");
             }
@@ -30,13 +30,13 @@ $(function() {
                 holdDate = jsArr[i]["dateOf"].getUTCFullYear();
                 $("#" + lastDate).after('<div class = "card col-xl-12 my-3 border-0 divYear" id = "' + holdDate + '"></div>');
                 $("#" + holdDate).append('<h2 class = "card-title">' + holdDate + "</h2>")
-                $("#" + holdDate).append('<div class = "card my-1 bg-light border-0" id = "' + holdDate + i + '"><div class = "card-body"></div></div>');
+                $("#" + holdDate).append('<a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none"><div class = "card my-1 bg-light border-0" id = "' + holdDate + i + '"><div class = "card-body"></div></div></a>');
                 //if sermon has a title, append ELSE display placeholder
                 if (jsArr[i]["title"]) {
-                    $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary"><a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none">' + jsArr[i]["title"] + '</a></h4>');
+                    $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary">' + jsArr[i]["title"] + '</h4>');
                 }
                 else {
-                    $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary"><a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none">Unarchived Sermon Title</a></h4>');
+                    $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary">Unarchived Sermon Title</a></h4>');
                 }                
                 $("#" + holdDate + i).children("div.card-body").append('<p class = "card-text text-muted">' + jsArr[i]["dateOf"].toLocaleDateString('en-US', options) + "</p>");
                 lastDate = holdDate;    
