@@ -9,7 +9,6 @@ $(function() {
         //select ALL from database in php file, then convert to big ol' json object, then loop thru to display.
         let holdDate = new Date(jsArr[0]["dateOf"]).getUTCFullYear();
         let lastDate = holdDate;
-        console.log(jsArr[0]["dateOf"]);
         $("#allYears").append('<div class = "card col-xl-12 my-3 border-0 divYear" id = "' + holdDate + '"></div>');
         $("#" + holdDate).append('<h2 class = "card-title">' + holdDate + "</h2>");
         for (let i = 0; i < $(jsArr).length; i++) {
