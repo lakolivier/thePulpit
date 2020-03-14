@@ -18,14 +18,14 @@ $(function() {
             trimTag = jsArr[i]["tagName"].replace(/\s/g, "");
             //if tag of current sermon is the same tag, append title and date
             if (jsArr[i]["tagName"].replace(/\s/g, "") == trimTag) {
-                console.log("hello sir");
+                console.log("hello if");
                     $("#" + trimTag).append('<div class = "card my-1 bg-light border-0" id = "' + trimTag + i + '"><div class = "card-body"></div></div>');
                     $("#" + trimTag + i).children("div.card-body").append('<h4 class = "card-title text-primary">' + jsArr[i]["title"] + "</h4>");
                     $("#" + trimTag + i).children("div.card-body").append('<p class = "card-text text-muted">' + jsArr[i]["dateOf"].toLocaleDateString('en-US', options) + "</p>");
             }
             //else change holdDate to new year, make new div, append current sermon info
             else {
-                console.log("hello sir");
+                console.log("hello else");
                 trimTag = jsArr[i]["tagName"].replace(/\s/g, "");
                 $("#" + lastTag).after('<div class = "card col-xl-12 my-3 border-0 divYear" id = "' + trimTag + '"></div>');
                 $("#" + trimTag).append('<h2 class = "card-title">' + jsArr[i]["tagName"] + "</h2>")
