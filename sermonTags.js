@@ -16,7 +16,7 @@ $(function() {
             jsArr[i]["dateOf"] = new Date(jsArr[i]["dateOf"]);
             //if tag of current sermon is the same tag, append title and date
             if (jsArr[i]["tagName"].replace(/\s/g, "") == trimTag) {
-                    $("#" + trimTag).append('<a href = "sermonTags.html#' + trimTag + '" class = "text-dark text-decoration-none"><div class = "card my-1 bg-light border-0" id = "' + trimTag + i + '"><div class = "card-body"></div></div></a>');
+                    $("#" + trimTag).append('<a href = "openSermon.html#' + trimTag + '" class = "text-dark text-decoration-none"><div class = "card my-1 bg-light border-0" id = "' + trimTag + i + '"><div class = "card-body"></div></div></a>');
                     $("#" + trimTag + i).children("div.card-body").append('<h4 class = "card-title text-primary">' + jsArr[i]["title"] + "</h4>");
                     $("#" + trimTag + i).children("div.card-body").append('<p class = "card-text text-muted">' + jsArr[i]["dateOf"].toLocaleDateString('en-US', options) + "</p>");
             }
@@ -25,7 +25,7 @@ $(function() {
                 trimTag = jsArr[i]["tagName"].replace(/\s/g, "");
                 $("#" + lastTag).after('<div class = "card col-xl-12 my-3 border-0 divYear" id = "' + trimTag + '"></div>');
                 $("#" + trimTag).append('<h2 class = "card-title">' + jsArr[i]["tagName"] + "</h2>")
-                $("#" + trimTag).append('<a href = "sermonTags.html#' + trimTag + '" class = "text-dark text-decoration-none"><div class = "card my-1 bg-light border-0" id = "' + trimTag + i + '"><div class = "card-body"></div></div></a>');
+                $("#" + trimTag).append('<a href = "openSermon.html#' + trimTag + '" class = "text-dark text-decoration-none"><div class = "card my-1 bg-light border-0" id = "' + trimTag + i + '"><div class = "card-body"></div></div></a>');
                 $("#" + trimTag + i).children("div.card-body").append('<h4 class = "card-title text-primary">' + jsArr[i]["title"] + "</h4>");
                 $("#" + trimTag + i).children("div.card-body").append('<p class = "card-text text-muted">' + jsArr[i]["dateOf"].toLocaleDateString('en-US', options) + "</p>");
                 lastTag = trimTag;    
