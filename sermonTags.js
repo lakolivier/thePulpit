@@ -12,7 +12,7 @@ $(function() {
         let lastTag = trimTag;
         $("#allTags").append('<div class = "card col-8 my-3 border-0 mx-auto" id = "' + trimTag + '"></div>');
         $("#" + trimTag).append('<h2 class = "card-title margin-0 border-bottom"><a href = "sermonTags.html#' + trimTag + '" class = "text-dark text-decoration-none">' + jsArr[0]["tagName"] + '</a></h2>');
-        console.log(jsArr[i].length);
+        console.log(jsArr.length);
         for (let i = 0; i < $(jsArr).length; i++) {
             jsArr[i]["dateOf"] = new Date(jsArr[i]["dateOf"]);
             trimTag = jsArr[i]["tagName"].replace(/\s/g, "");
