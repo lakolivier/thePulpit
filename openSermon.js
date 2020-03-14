@@ -19,7 +19,7 @@ $(function(){
             $("#sermonVid").attr("src", "https://www.youtube.com/embed/" + jsObj.vidLink);
         }
         else {
-            $("#sermonVid").remove();
+            $("#vidBox").remove();
         }
         if (jsObj.imgLink){
         //loop this until numImgs is exhausted
