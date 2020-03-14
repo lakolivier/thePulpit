@@ -15,7 +15,7 @@ $sql = "SELECT s.title, s.dateOf, s.sermonId, t.tagName, t.tagId, st.tagId, st.s
 FROM Sermons AS s
 INNER JOIN SermonsTags AS st ON st.sermonId = s.sermonId
 INNER JOIN tags AS t ON t.tagId = st.tagId
-ORDER BY t.tagId";
+ORDER BY t.tagName";
 $result = $link->query($sql);
 $test = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
