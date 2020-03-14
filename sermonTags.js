@@ -17,6 +17,8 @@ $(function() {
             if (jsArr[i]["tagName"].replace(/\s/g, "") == trimTag) {
                     $("#" + trimTag).append('<div class = "card my-1 bg-light border-0" id = "' + trimTag + i + '"><div class = "card-body"></div></div>');
                     $("#" + trimTag + i).children("div.card-body").append('<h4 class = "card-title text-primary">' + jsArr[i]["title"] + "</h4>");
+                    console.log(jsArr[i]);
+                    console.log(jsArr[i]["dateOf"]);
                     $("#" + trimTag + i).children("div.card-body").append('<p class = "card-text text-muted">' + jsArr[i]["dateOf"].toLocaleDateString('en-US', options) + "</p>");
             }
             //else change holdDate to new year, make new div, append current sermon info
