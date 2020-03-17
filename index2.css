@@ -1,4 +1,4 @@
-div.hovElement:hover {
-    background-color: var(--secondary);
+.hovElement:hover {
+    background-color: var(--gray-300);
     color: var(--white)!important;
 }
