@@ -12,7 +12,7 @@ $(function() {
                 $("#" + i).children("div.card-body").append('<h4 class = "card-title">' + jsArr[i]["title"] + '</h4>');
             else
                 $("#" + i).children("div.card-body").append('<h4 class = "card-title">Unarchived Sermon Title</h4>');
-            $("#" + i).children("div.card-body").append('<div class = "text-secondary" id = "date">' + jsArr[i]["dateOf"] + '</div>');
+            $("#" + i).children("div.card-body").append('<div class = "text-secondary hovElement">' + jsArr[i]["dateOf"] + '</div>');
             //if there's a video file, append video thumbnail, else append sermon img a
             if (jsArr[i]["vidLink"]) {
                 //when appending video thumbnail, add play icon atop it
