@@ -1,4 +1,7 @@
 .hovElement:hover {
     background-color: var(--secondary);
-    color: var(--white) !important;
+    color: var(--white);
+}
+.hovElement #date:hover {
+    color: var(--white);
 }
