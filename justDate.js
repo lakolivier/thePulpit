@@ -7,12 +7,12 @@ $(function() {
         let holdDate = new Date(jsArr[0]["YEAR(dateOf)"]).getUTCFullYear();
         let lastDate = holdDate;
         $("#allYears").append('<div class = "card rounded-0 col-8 my-3 border-0 mx-auto" id = "' + holdDate + '"></div>');
-        $("#" + holdDate).append('<h2 class = "card-title margin-0 border-bottom"><a href = "sermonDate.html#' + holdDate + '" class = "text-dark text-decoration-none">' + holdDate + "</a></h2>");
+        $("#" + holdDate).append('<h2 class = "card-title hovElement"><a href = "sermonDate.html#' + holdDate + '" class = "text-dark text-decoration-none">' + holdDate + "</a></h2>");
         for (let i = 1; i < $(jsArr).length; i++) {
             jsArr[i]["YEAR(dateOf)"] = new Date(jsArr[i]["YEAR(dateOf)"]);
             let holdDate = jsArr[i]["YEAR(dateOf)"].getUTCFullYear();
             $("#" + lastDate).after('<div class = "card rounded-0 col-8 my-3 border-0 mx-auto" id = "' + holdDate + '"></div>');
-            $("#" + holdDate).append('<h2 class = "card-title margin-0 border-bottom"><a href = "sermonDate.html#' + holdDate + '" class = "text-dark text-decoration-none">' + holdDate + "</a></h2>");
+            $("#" + holdDate).append('<h2 class = "card-title hovElement"><a href = "sermonDate.html#' + holdDate + '" class = "text-dark text-decoration-none">' + holdDate + "</a></h2>");
             lastDate = holdDate;
         }
     });
