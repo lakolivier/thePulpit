@@ -6,13 +6,13 @@ $(function() {
         //select ALL from database in php file, then convert to big ol' json object, then loop thru to display.
         let holdDate = new Date(jsArr[0]["YEAR(dateOf)"]).getUTCFullYear();
         let lastDate = holdDate;
-        $("#allYears").append('<div class = "card bg-light rounded-0 col-md-4 p-3 border-0 mx-auto" id = "' + holdDate + '"></div>');
-        $("#" + holdDate).append('<h2 class = "card-title hovElement"><a href = "sermonDate.html#' + holdDate + '" class = "text-dark text-decoration-none">' + holdDate + "</a></h2>");
+        $("#allYears").append('<div class = "card bg-light rounded-0 col-md-4 p-3 border-0 my-1 mx-auto" id = "' + holdDate + '"></div>');
+        $("#" + holdDate).append('<h2 class = "card-title hovElement m-0"><a href = "sermonDate.html#' + holdDate + '" class = "text-dark text-decoration-none">' + holdDate + "</a></h2>");
         for (let i = 1; i < $(jsArr).length; i++) {
             jsArr[i]["YEAR(dateOf)"] = new Date(jsArr[i]["YEAR(dateOf)"]);
             let holdDate = jsArr[i]["YEAR(dateOf)"].getUTCFullYear();
-            $("#" + lastDate).after('<div class = "card bg-light rounded-0 col-md-4 p-3 border-0 mx-auto" id = "' + holdDate + '"></div>');
-            $("#" + holdDate).append('<h2 class = "card-title hovElement"><a href = "sermonDate.html#' + holdDate + '" class = "text-dark text-decoration-none">' + holdDate + "</a></h2>");
+            $("#" + lastDate).after('<div class = "card bg-light rounded-0 col-md-4 p-3 border-0 my-1 mx-auto" id = "' + holdDate + '"></div>');
+            $("#" + holdDate).append('<h2 class = "card-title hovElement m-0"><a href = "sermonDate.html#' + holdDate + '" class = "text-dark text-decoration-none">' + holdDate + "</a></h2>");
             lastDate = holdDate;
         }
     });
