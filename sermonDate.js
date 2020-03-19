@@ -30,6 +30,9 @@ $(function() {
                         console.log("text");
                         icons = '<i class="far fa-file-alt float-right"></i>';
                     }
+                    else {
+                        console.log("broken");
+                    }
                     //if sermon has a title, append ELSE display placeholder
                     if (jsArr[i]["title"]) {
                         $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary">' + jsArr[i]["title"] + ' ' + icons + '</h4>');
