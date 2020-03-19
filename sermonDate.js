@@ -30,15 +30,12 @@ $(function() {
                         console.log("text");
                         icons = '<i class="far fa-file-alt float-right"></i>';
                     }
-                    else {
-                        console.log("broken");
-                    }
                     //if sermon has a title, append ELSE display placeholder
                     if (jsArr[i]["title"]) {
-                        $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary">' + jsArr[i]["title"] + ' ' + icons + '</h4>');
+                        $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary">' + jsArr[i]["title"] + icons + '</h4>');
                     }
                     else {
-                        $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary">Unarchived Sermon Title</h4>');
+                        $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary">Unarchived Sermon Title' + icons + '</h4>');
                     }
                     $("#" + holdDate + i).children("div.card-body").append('<p class = "card-text text-muted">' + jsArr[i]["dateOf"].toLocaleDateString('en-US', options) + "</p>");
             }
@@ -50,10 +47,10 @@ $(function() {
                 $("#" + holdDate).append('<a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none"><div class = "card rounded-0 my-1 bg-light border-0" id = "' + holdDate + i + '"><div class = "card-body hovElement"></div></div></a>');
                 //if sermon has a title, append ELSE display placeholder
                 if (jsArr[i]["title"]) {
-                    $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary">' + jsArr[i]["title"] + ' ' + icons + '</h4>');
+                    $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary">' + jsArr[i]["title"] + icons + '</h4>');
                 }
                 else {
-                    $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary">Unarchived Sermon Title</a></h4>');
+                    $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary">Unarchived Sermon Title' + icons + '</h4>');
                 }                
                 $("#" + holdDate + i).children("div.card-body").append('<p class = "card-text text-muted">' + jsArr[i]["dateOf"].toLocaleDateString('en-US', options) + "</p>");
                 lastDate = holdDate;    
