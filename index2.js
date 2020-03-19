@@ -20,7 +20,7 @@ $(function() {
                 $("#vid" + i).css({"bottom":"45%", "left":"45%"});
             }
             else {
-                $("#" + i).children("div.card-body").append('<div class = "position-relative"><img class = "my-1 img-fluid card-img-bottom" src = "images/scans/' + jsArr[i]["imgLink"] + 'a.jpg"><a id = "img' + i + '" href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "position-absolute"><i class="fas fa-images fa-2x text-dark shadow-sm"></i></a></div>');
+                $("#" + i).children("div.card-body").append('<div class = "position-relative"><img class = "my-1 img-fluid card-img-bottom" src = "images/scans/' + jsArr[i]["imgLink"] + 'a.jpg"><a id = "img' + i + '" href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '></a></div>');
                 $("#img" + i).css({"bottom":"45%", "left":"45%"});
             }
                 //clip img source's black borders
