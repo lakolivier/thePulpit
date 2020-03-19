@@ -17,7 +17,7 @@ $(function() {
             let icons;
             if (jsArr[i]["vidLink"] && jsArr[i]["imgLink"]) {
                 console.log("both");
-                icons = '<i class="fas fa-play px-1 float-right"></i><i class="far fa-file-alt px-1 float-right"></i>';
+                icons = '<i class="far fa-file-alt px-1 float-right"></i><i class="fas fa-play px-1 float-right"></i>';
             }
             else if (jsArr[i]["vidLink"]) {
                 console.log("vid");
