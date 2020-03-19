@@ -17,15 +17,15 @@ $(function() {
             let icons;
             if (jsArr[i]["vidLink"] && jsArr[i]["imgLink"]) {
                 console.log("both");
-                icons = '<i class="fas fa-play py-1 float-right"></i><i class="far fa-file-alt py-1 float-right"></i>';
+                icons = '<i class="fas fa-play px-1 float-right"></i><i class="far fa-file-alt px-1 float-right"></i>';
             }
             else if (jsArr[i]["vidLink"]) {
                 console.log("vid");
-                icons = '<i class="fas fa-play py-1 float-right"></i>';
+                icons = '<i class="fas fa-play px-1 float-right"></i>';
             }
             else if (jsArr[i]["imgLink"]) {
                 console.log("text");
-                icons = '<i class="far fa-file-alt py-1 float-right"></i>';
+                icons = '<i class="far fa-file-alt px-1 float-right"></i>';
             }
             //if year of current sermon is the same year, append title and date
             if (jsArr[i]["dateOf"].getUTCFullYear() == holdDate) {
