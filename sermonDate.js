@@ -13,23 +13,23 @@ $(function() {
         $("#" + holdDate).append('<h2 class = "card-title">' + holdDate + "</h2>");
         for (let i = 0; i < $(jsArr).length; i++) {
             jsArr[i]["dateOf"] = new Date(jsArr[i]["dateOf"]);
+            //check if sermon is video or text or both, then ready proper icon:
+            let icons;
+            if (jsArr[i]["vidLink"] && jsArr[i]["imgLink"]) {
+                console.log("both");
+                icons = '<i class="fas fa-play float-right"></i><i class="far fa-file-alt float-right"></i>';
+            }
+            else if (jsArr[i]["vidLink"]) {
+                console.log("vid");
+                icons = '<i class="fas fa-play float-right"></i>';
+            }
+            else if (jsArr[i]["imgLink"]) {
+                console.log("text");
+                icons = '<i class="far fa-file-alt float-right"></i>';
+            }
             //if year of current sermon is the same year, append title and date
             if (jsArr[i]["dateOf"].getUTCFullYear() == holdDate) {
                     $("#" + holdDate).append('<a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none"><div class = "card rounded-0 my-1 bg-light border-0" id = "' + holdDate + i + '"><div class = "card-body hovElement"></div></div></a>');
-                    //check if sermon is video or text or both, then append proper icon:
-                    let icons;
-                    if (jsArr[i]["vidLink"] && jsArr[i]["imgLink"]) {
-                        console.log("both");
-                        icons = '<i class="fas fa-play float-right"></i><i class="far fa-file-alt float-right"></i>';
-                    }
-                    else if (jsArr[i]["vidLink"]) {
-                        console.log("vid");
-                        icons = '<i class="fas fa-play float-right"></i>';
-                    }
-                    else if (jsArr[i]["imgLink"]) {
-                        console.log("text");
-                        icons = '<i class="far fa-file-alt float-right"></i>';
-                    }
                     //if sermon has a title, append ELSE display placeholder
                     if (jsArr[i]["title"]) {
                         $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary">' + jsArr[i]["title"] + icons + '</h4>');
