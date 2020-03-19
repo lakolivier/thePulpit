@@ -19,17 +19,20 @@ $(function() {
                     //check if sermon is video or text or both, then append proper icon:
                     let icons;
                     if (jsArr[i]["vidLink"] && jsArr[i]["imgLink"]) {
+                        console.log("both");
                         icons = '<i class="fas fa-play float-right"></i><i class="far fa-file-alt float-right"></i>';
                     }
                     else if (jsArr[i]["vidLink"]) {
+                        console.log("vid");
                         icons = '<i class="fas fa-play float-right"></i>';
                     }
                     else if (jsArr[i]["imgLink"]) {
+                        console.log("text");
                         icons = '<i class="far fa-file-alt float-right"></i>';
                     }
                     //if sermon has a title, append ELSE display placeholder
                     if (jsArr[i]["title"]) {
-                        $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary">' + jsArr[i]["title"] + icons + '</h4>');
+                        $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary">' + jsArr[i]["title"] + ' ' + icons + '</h4>');
                     }
                     else {
                         $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary">Unarchived Sermon Title</h4>');
@@ -44,7 +47,7 @@ $(function() {
                 $("#" + holdDate).append('<a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none"><div class = "card rounded-0 my-1 bg-light border-0" id = "' + holdDate + i + '"><div class = "card-body hovElement"></div></div></a>');
                 //if sermon has a title, append ELSE display placeholder
                 if (jsArr[i]["title"]) {
-                    $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary">' + jsArr[i]["title"] + icons + '</h4>');
+                    $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary">' + jsArr[i]["title"] + ' ' + icons + '</h4>');
                 }
                 else {
                     $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary">Unarchived Sermon Title</a></h4>');
