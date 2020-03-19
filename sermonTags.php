@@ -11,7 +11,7 @@ if($link -> connect_error){
     die("Connection failed: " . $link -> connect_error);
 }
 //select from db REQUIRES INPUT OF SERMONID
-$sql = "SELECT s.title, s.dateOf, s.sermonId, t.tagName, t.tagId, st.tagId, st.sermonId 
+$sql = "SELECT s.title, s.dateOf, s.sermonId, s.vidLink, s.imgLink, t.tagName, t.tagId, st.tagId, st.sermonId 
 FROM Sermons AS s
 INNER JOIN SermonsTags AS st ON st.sermonId = s.sermonId
 INNER JOIN tags AS t ON t.tagId = st.tagId
