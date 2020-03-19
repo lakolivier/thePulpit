@@ -23,7 +23,7 @@ $(function() {
                     else {
                         $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title text-primary">Unarchived Sermon Title</h4>');
                     }
-                    $("#" + holdDate + i).children("div.card-body").append('<p class = "card-text text-muted">' + jsArr[i]["dateOf"].toLocaleDateString('en-US', options) + "</p>");
+                    $("#" + holdDate + i).children("div.card-body").append('<p class = "card-text col-6 text-muted">' + jsArr[i]["dateOf"].toLocaleDateString('en-US', options) + "</p>");
                     $("#" + holdDate + i).children("div.card-body").append('<i class="far fa-file-alt col-1"></i>');
             }
             //else change holdDate to new year, make new div, append current sermon info
