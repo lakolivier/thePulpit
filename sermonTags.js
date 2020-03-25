@@ -17,20 +17,18 @@ $(function() {
             //check if sermon is video or text or both, then ready proper icon:
             let icons;
             if (jsArr[i]["vidLink"] && jsArr[i]["imgLink"]) {
-                console.log("both");
                 icons = '<i class="far fa-file-alt px-1 float-right"></i><i class="fas fa-play px-1 float-right"></i>';
             }
             else if (jsArr[i]["vidLink"]) {
-                console.log("vid");
+
                 icons = '<i class="fas fa-play px-1 float-right"></i>';
             }
             else if (jsArr[i]["imgLink"]) {
-                console.log("text");
                 icons = '<i class="far fa-file-alt px-1 float-right"></i>';
             }
             //if tag of current sermon is the same tag, append title and date
             if (jsArr[i]["tagName"].replace(/\s/g, "") == trimTag) {
-                    $("#" + trimTag).append('<a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-dark text-decoration-none"><div class = "card rounded-0 y-1 bg-light border-0" id = "' + trimTag + i + '"><div class = "card-body hovElement"></div></div></a>');
+                    $("#" + trimTag).append('<a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-dark text-decoration-none"><div class = "card rounded-0 my-1 bg-light border-0" id = "' + trimTag + i + '"><div class = "card-body hovElement"></div></div></a>');
                     //if sermon has a title, append ELSE display placeholder
                     if (jsArr[i]["title"]) {
                         $("#" + trimTag + i).children("div.card-body").append('<h4 class = "card-title text-primary">' + jsArr[i]["title"] + icons + '</h4>');
