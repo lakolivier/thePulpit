@@ -6,9 +6,23 @@ h1 {
     font-family: 'Cantata One', serif;
 }
 
+h4 {
+    font-family: 'News Cycle', sans-serif;
+    font-weight: 700;
+}
+
+nav {
+    font-family: 'News Cycle', sans-serif;
+    font-weight: 700;
+}
 .jumbotron {
     font-family: 'Antic Slab', serif;
     color: #004e87;
+}
+
+.text-secondary {
+    font-family: 'News Cycle', sans-serif;
+    font-weight: 400;
 }
 
 .hovElement:hover {
