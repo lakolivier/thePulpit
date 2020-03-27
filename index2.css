@@ -1,3 +1,7 @@
+h1 {
+    font-family: 'Playfair Display', serif;
+}
+
 .hovElement:hover {
     background-color: #dee2e6;
 }
