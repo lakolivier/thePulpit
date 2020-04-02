@@ -9,7 +9,7 @@ $(function() {
         //select ALL from database in php file, then convert to big ol' json object, then loop thru to display.
         let holdDate = new Date(jsArr[0]["dateOf"]).getUTCFullYear();
         let lastDate = holdDate;
-        $("#allYears").append('<div class = "card rounded-0 col-xl-12 my-3 border-0 divYear" id = "' + holdDate + '"></div>');
+        $("#allYears").append('<div class = "card rounded-0 col-xl-12 my-3 border-0" id = "' + holdDate + '"></div>');
         $("#" + holdDate).append('<h2 class = "card-title">' + holdDate + "</h2>");
         for (let i = 0; i < $(jsArr).length; i++) {
             jsArr[i]["dateOf"] = new Date(jsArr[i]["dateOf"]);
@@ -42,7 +42,7 @@ $(function() {
             //else change holdDate to new year, make new div, append current sermon info
             else {
                 holdDate = jsArr[i]["dateOf"].getUTCFullYear();
-                $("#" + lastDate).after('<div class = "card rounded-0 col-xl-12 my-3 border-0 divYear" id = "' + holdDate + '"></div>');
+                $("#" + lastDate).after('<div class = "card rounded-0 col-xl-12 my-3 border-0" id = "' + holdDate + '"></div>');
                 $("#" + holdDate).append('<h2 class = "card-title">' + holdDate + "</h2>")
                 $("#" + holdDate).append('<a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none"><div class = "card rounded-0 my-1 bg-light border-0" id = "' + holdDate + i + '"><div class = "card-body hovElement"></div></div></a>');
                 //if sermon has a title, append ELSE display placeholder
