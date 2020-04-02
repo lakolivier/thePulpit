@@ -29,7 +29,7 @@ $(function() {
             }
             //if year of current sermon is the same year, append title and date
             if (jsArr[i]["dateOf"].getUTCFullYear() == holdDate) {
-                    $("#" + holdDate).append('<a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none"><div class = "card rounded-0 my-1 bg-white border-0" id = "' + holdDate + i + '"><div class = "card-body hovElement"></div></div></a>');
+                    $("#" + holdDate).append('<a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none"><div class = "card rounded-0 my-1 bg-white shadow-sm border-0" id = "' + holdDate + i + '"><div class = "card-body hovElement"></div></div></a>');
                     //if sermon has a title, append ELSE display placeholder
                     if (jsArr[i]["title"]) {
                         $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title">' + jsArr[i]["title"] + icons + '</h4>');
@@ -44,7 +44,7 @@ $(function() {
                 holdDate = jsArr[i]["dateOf"].getUTCFullYear();
                 $("#" + lastDate).after('<div class = "card rounded-0 col-xl-12 my-3 border-0 bg-light" id = "' + holdDate + '"></div>');
                 $("#" + holdDate).append('<h2 class = "card-title text-dark">' + holdDate + "</h2>")
-                $("#" + holdDate).append('<a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none"><div class = "card rounded-0 my-1 bg-white border-0" id = "' + holdDate + i + '"><div class = "card-body hovElement"></div></div></a>');
+                $("#" + holdDate).append('<a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none"><div class = "card rounded-0 my-1 bg-white shadow-sm border-0" id = "' + holdDate + i + '"><div class = "card-body hovElement"></div></div></a>');
                 //if sermon has a title, append ELSE display placeholder
                 if (jsArr[i]["title"]) {
                     $("#" + holdDate + i).children("div.card-body").append('<h4 class = "card-title">' + jsArr[i]["title"] + icons + '</h4>');
