@@ -11,7 +11,7 @@ $(function() {
         let trimTag = jsArr[0]["tagName"].replace(/\s/g, "");
         let lastTag = trimTag;
         $("#allTags").append('<div class = "card rounded-0 col-xl-12 my-3 bg-light border-0 text-dark" id = "' + trimTag + '"></div>');
-        $("#" + trimTag).append('<h2 class = "card-title">' + jsArr[0]["tagName"] + '</a></h2>');
+        $("#" + trimTag).append('<h2 class = "card-title text-dark">' + jsArr[0]["tagName"] + '</a></h2>');
         for (let i = 0; i < $(jsArr).length; i++) {
             jsArr[i]["dateOf"] = new Date(jsArr[i]["dateOf"]);
             //check if sermon is video or text or both, then ready proper icon:
@@ -41,8 +41,8 @@ $(function() {
             //else change trimTag to new tag, make new div, append current sermon info
             else {
                 trimTag = jsArr[i]["tagName"].replace(/\s/g, "");
-                $("#" + lastTag).after('<div class = "card rounded-0 col-xl-12 my-3 bg-light border-0 text-dark" id = "' + trimTag + '"></div>');
-                $("#" + trimTag).append('<h2 class = "card-title">' + jsArr[i]["tagName"] + "</h2>")
+                $("#" + lastTag).after('<div class = "card rounded-0 col-xl-12 my-3 bg-light border-0" id = "' + trimTag + '"></div>');
+                $("#" + trimTag).append('<h2 class = "card-title text-dark">' + jsArr[i]["tagName"] + "</h2>")
                 $("#" + trimTag).append('<a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-dark text-decoration-none"><div class = "card rounded-0 my-1 bg-white border-0" id = "' + trimTag + i + '"><div class = "card-body hovElement"></div></div></a>');
                 //if sermon has a title, append ELSE display placeholder
                 if (jsArr[i]["title"]) {
