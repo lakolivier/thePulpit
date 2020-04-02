@@ -28,7 +28,7 @@ $(function() {
             }
             //if tag of current sermon is the same tag, append title and date
             if (jsArr[i]["tagName"].replace(/\s/g, "") == trimTag) {
-                    $("#" + trimTag).append('<a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-dark text-decoration-none"><div class = "card rounded-0 my-1 bg-white border-0" id = "' + trimTag + i + '"><div class = "card-body hovElement"></div></div></a>');
+                    $("#" + trimTag).append('<a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-dark text-decoration-none"><div class = "card rounded-0 my-1 bg-white shadow-sm border-0" id = "' + trimTag + i + '"><div class = "card-body hovElement"></div></div></a>');
                     //if sermon has a title, append ELSE display placeholder
                     if (jsArr[i]["title"]) {
                         $("#" + trimTag + i).children("div.card-body").append('<h4 class = "card-title">' + jsArr[i]["title"] + icons + '</h4>');
@@ -43,7 +43,7 @@ $(function() {
                 trimTag = jsArr[i]["tagName"].replace(/\s/g, "");
                 $("#" + lastTag).after('<div class = "card rounded-0 col-xl-12 my-3 bg-light border-0" id = "' + trimTag + '"></div>');
                 $("#" + trimTag).append('<h2 class = "card-title text-dark">' + jsArr[i]["tagName"] + "</h2>")
-                $("#" + trimTag).append('<a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-dark text-decoration-none"><div class = "card rounded-0 my-1 bg-white border-0" id = "' + trimTag + i + '"><div class = "card-body hovElement"></div></div></a>');
+                $("#" + trimTag).append('<a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-dark text-decoration-none"><div class = "card rounded-0 my-1 bg-white shadow-sm border-0" id = "' + trimTag + i + '"><div class = "card-body hovElement"></div></div></a>');
                 //if sermon has a title, append ELSE display placeholder
                 if (jsArr[i]["title"]) {
                     $("#" + trimTag + i).children("div.card-body").append('<h4 class = "card-title">' + jsArr[i]["title"] + icons + '</h4>');
