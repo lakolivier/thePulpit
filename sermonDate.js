@@ -10,7 +10,7 @@ $(function() {
         let holdDate = new Date(jsArr[0]["dateOf"]).getUTCFullYear();
         let lastDate = holdDate;
         $("#allYears").append('<div class = "card rounded-0 col-xl-12 my-3 border-0 bg-light" id = "' + holdDate + '"></div>');
-        $("#" + holdDate).append('<h2 class = "card-title">' + holdDate + "</h2>");
+        $("#" + holdDate).append('<h2 class = "card-title text-dark">' + holdDate + "</h2>");
         for (let i = 0; i < $(jsArr).length; i++) {
             jsArr[i]["dateOf"] = new Date(jsArr[i]["dateOf"]);
             //check if sermon is video or text or both, then ready proper icon:
@@ -43,7 +43,7 @@ $(function() {
             else {
                 holdDate = jsArr[i]["dateOf"].getUTCFullYear();
                 $("#" + lastDate).after('<div class = "card rounded-0 col-xl-12 my-3 border-0 bg-light" id = "' + holdDate + '"></div>');
-                $("#" + holdDate).append('<h2 class = "card-title">' + holdDate + "</h2>")
+                $("#" + holdDate).append('<h2 class = "card-title text-dark">' + holdDate + "</h2>")
                 $("#" + holdDate).append('<a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-decoration-none"><div class = "card rounded-0 my-1 bg-white border-0" id = "' + holdDate + i + '"><div class = "card-body hovElement"></div></div></a>');
                 //if sermon has a title, append ELSE display placeholder
                 if (jsArr[i]["title"]) {
