@@ -1,17 +1,14 @@
 header {
     background-color: #004e87;
 }
-
 h1 {
     font-family: 'Limelight', cursive;
 }
-
-h4 {
+h4, h2 {
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     color: #004e87;
 }
-
 nav {
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
@@ -19,12 +16,10 @@ nav {
 .jumbotron {
     font-family: 'Antic Slab', serif;
 }
-
 .text-secondary {
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
 }
-
 .hovElement:hover {
     background-color: #dee2e6;
 }
