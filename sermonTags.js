@@ -26,6 +26,8 @@ $(function() {
             else if (jsArr[i]["imgLink"]) {
                 icons = '<i class="far fa-file-alt px-1 float-right"></i>';
             }
+            //ready tags for appending
+            console.log(jsArr[i]["tagName"]);
             //if tag of current sermon is the same tag, append title and date
             if (jsArr[i]["tagName"].replace(/\s/g, "") == trimTag) {
                     $("#" + trimTag).append('<a href = "openSermon.html?sermonId=' + jsArr[i]["sermonId"] + '" class = "text-dark text-decoration-none"><div class = "card rounded-0 my-1 bg-white shadow-sm border-0" id = "' + trimTag + i + '"><div class = "card-body hovElement"></div></div></a>');
