@@ -33,6 +33,7 @@ foreach ($assoc as $sermon){
         $stags["sermonId"] = $sermon["sermonId"];
         $stags = $sermon["tagName"];
     }
+    echo $stags;
 }
 if (!empty($assoc)){
     echo json_encode($assoc);
