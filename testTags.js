@@ -1,5 +1,5 @@
 $(function() {
-    $.get("sermonTags.php", function(jsonObj) {
+    $.get("testTags.php", function(jsonObj) {
         document.write(jsonObj);
     });
 });
