@@ -38,17 +38,16 @@ foreach ($assoc as $sermon){
 }
 */
 foreach ($assoc as $sermon){
-    $thisSermon = $sermon["sermonId"];
+    $thisTag = $sermon["tagName"];
     
-    if (in_array($thisSermon, $stags)){
-        $stags[$thisSermon]["tagName"] = $sermon["tagName"];
+    if (in_array($sermon["tagName"], $stags)){
+        $stags[$thisTag]["sermonId"] = $sermon["sermonId"];
     }
     else{
-        $stags["sermonId"] = $sermon["sermonId"];
+        $stags["tagName"] = $thisTag;
         /*array_push($stags[$thisSermon]["tagId"], $sermon["tagId"]);*/
-        $stags[$thisSermon]["tagName"] = $sermon["tagName"];
+        $stags[$thisTag]["sermonId"] = $sermon["sermonId"];
     }
-    $sermon++;
 }
 echo json_encode($stags);
 /* appearance of stags:
