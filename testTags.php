@@ -37,11 +37,17 @@ foreach ($assoc as $sermon){
     echo $stags;
 }
 */
-echo $assoc[0]["title"];
-/*
 foreach ($assoc as $sermon){
-    if (in_array($assoc[$sermon][], $assoc))
-}*/
+    $thisSermon = $assoc[$sermon]["sermonId"];
+    if (in_array($thisSermon, $stags)){
+        array_push($stags[$thisSermon], $assoc[$sermon]["tagId"]);
+    }
+    else{
+        $stags["sermonId"] = $thisSermon;
+        array_push($stags[$thisSermon], $assoc[$sermon]["tagId"]);
+    }
+}
+echo $stags;
 /* appearance of stags:
 stags[sermonId][sermonTag]
 first check the array for $sermons's sermon
