@@ -42,11 +42,13 @@ foreach ($assoc as $sermon){
     
     if (in_array($sermon["tagName"], $stags)){
         $stags[$thisTag]["sermonId"] = $sermon["sermonId"];
+        echo "flag1";
     }
     else{
         $stags["tagName"] = $thisTag;
         /*array_push($stags[$thisSermon]["tagId"], $sermon["tagId"]);*/
         $stags[$thisTag]["sermonId"] = $sermon["sermonId"];
+        echo "flag2";
     }
 }
 echo json_encode($stags);
