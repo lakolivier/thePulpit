@@ -39,6 +39,7 @@ foreach ($assoc as $sermon){
 */
 foreach ($assoc as $sermon){
     $thisSermon = $assoc[$sermon]["sermonId"];
+    echo "anything";
     echo $thisSermon;
     if (in_array($thisSermon, $stags)){
         array_push($stags[$thisSermon], $assoc[$sermon]["tagId"]);
