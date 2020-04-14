@@ -38,9 +38,10 @@ foreach ($assoc as $sermon){
 }
 */
 echo $assoc[0]["title"];
+/*
 foreach ($assoc as $sermon){
     if (in_array($assoc[$sermon][], $assoc))
-}
+}*/
 /* appearance of stags:
 stags[sermonId][sermonTag]
 first check the array for $sermons's sermon
