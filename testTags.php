@@ -41,7 +41,7 @@ foreach ($assoc as $sermon){
     $thisTag = $sermon["tagName"];
 
     if (in_array($sermon["tagName"], $stags)){
-        array_push($stags[$thisTag]["sermonId"]), $sermon["sermonId"];
+        array_push($stags[$thisTag]["sermonId"], $sermon["sermonId"]);
     }
     else{
         $stags["tagName"] = $thisTag;
