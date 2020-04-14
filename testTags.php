@@ -47,7 +47,7 @@ foreach ($assoc as $sermon){
         array_push($stags[$thisSermon], $assoc[$sermon]["tagId"]);
     }
 }
-echo $stags;
+echo json_encode($stags);
 /* appearance of stags:
 stags[sermonId][sermonTag]
 first check the array for $sermons's sermon
