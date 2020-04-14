@@ -48,6 +48,7 @@ foreach ($assoc as $sermon){
         /*array_push($stags[$thisSermon]["tagId"], $sermon["tagId"]);*/
         $stags[$thisSermon]["tagId"] = $sermon["tagId"];
     }
+    $sermon++;
 }
 echo json_encode($stags);
 /* appearance of stags:
