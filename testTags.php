@@ -25,6 +25,7 @@ $testData =  array(
     'tagName' => 'test',
     'tagName' => 'test'
 );
+/*
 foreach ($assoc as $sermon){
     if ($stags["sermonId"] == $sermon["sermonId"]){
         $stags = $sermon["tagName"];
@@ -35,9 +36,13 @@ foreach ($assoc as $sermon){
     }
     echo $stags;
 }
-
+*/
+echo $assoc[0]["title"];
+foreach ($assoc as $sermon){
+    if (in_array($assoc[$sermon][], $assoc))
+}
 /* appearance of stags:
-stags[sermonId[sermonTag]
+stags[sermonId][sermonTag]
 first check the array for $sermons's sermon
 if it's "new" to stags then place it in stags[sermonId],
 and place tags in stags[sermonId][tagName]
