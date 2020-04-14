@@ -54,12 +54,12 @@ first check the array for $sermons's sermon
 if it's "new" to stags then place it in stags[sermonId],
 and place tags in stags[sermonId][tagName]
 if it's been seen before just place tags in [sermonId][tagName]*/
-
+/*
 if (!empty($assoc)){
     echo json_encode($assoc);
 }
 else{
     echo json_encode([]);
-}
+}*/
 ?>
 
