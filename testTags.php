@@ -37,7 +37,7 @@ foreach ($assoc as $sermon){
     echo $stags;
 }
 */
-foreach ($assoc as list($sermon)){
+foreach ($assoc as $sermon){
     $thisSermon = $sermon["sermonId"];
     
     if (in_array($thisSermon, $stags)){
