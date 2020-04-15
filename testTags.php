@@ -49,15 +49,13 @@ foreach ($assoc as $sermon){
         $stags[$thisTag]["sermonId"] = $sermon["sermonId"];
     }
 }*/
-$stagsI = 0;
 foreach ($assoc as $sermon){
     if (in_array($sermon["sermonId"], $stags)){
         $stags[$sermon["sermonId"]][] = $sermon["tagName"];
     }
     else{
-        $stags[$stagsI] = $sermon["sermonId"];
+        $stags[] = $sermon["sermonId"];
         $stags[$sermon["sermonId"]][] = $sermon["tagName"];
-        $stagsI++;
     }
 }
 echo json_encode($stags);
