@@ -36,18 +36,26 @@ foreach ($assoc as $sermon){
     }
     echo $stags;
 }
-*/
+
 foreach ($assoc as $sermon){
     $thisTag = $sermon["tagName"];
-    echo $thisTag;
     if (in_array($sermon["tagName"], $stags)){
         array_push($stags[$thisTag], "sermonId");
         array_push($stags[$thisTag], $sermon["sermonId"]);
     }
     else{
         $stags["tagName"] = $thisTag;
-        /*array_push($stags[$thisSermon]["tagId"], $sermon["tagId"]);*/
+        /*array_push($stags[$thisSermon]["tagId"], $sermon["tagId"]);
         $stags[$thisTag]["sermonId"] = $sermon["sermonId"];
+    }
+}*/
+foreach ($assoc as $sermon){
+    if (in_array($sermon["sermonId"], $stags)){
+        $stags[$sermon["sermonId"]][] = $sermon["tagName"];
+    }
+    else{
+        $stags["sermonId"] = $sermon["sermonId"];
+        $stags[$sermon["sermonId"]][] = $sermon["tagName"];
     }
 }
 echo json_encode($stags);
