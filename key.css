@@ -1,9 +1,10 @@
 header {
     background-color: #004e87;
 }
-/*h1 {
-    font-family: 'Playfair Display SC', serif;
-}*/
+h1 {
+    /*font-family: 'Playfair Display SC', serif;*/
+    font-family: 'Montserrat', sans-serif;
+}
 h4, h2 {
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
